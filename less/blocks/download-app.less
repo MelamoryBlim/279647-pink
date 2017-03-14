@@ -1,17 +1,30 @@
 .download-app {
   background-color: #1d2631;
+  padding-top: 25px;
 }
 
 .download-app__btn {
-  display: inline-block;
-  padding: 15px 35px;
-  margin-top: 25px;
-  margin-left: auto;
+  display: block;
+  text-align: center;
+  width: 210px;
+  padding: 15px 20px;
+  margin: 0 auto;
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   border: 3px solid #ffffff;
   border-radius: 50px;
+  transition: 0.1s linear background-color, 0.1 s linear color;
+}
+
+.download-app__btn:hover {
+  background-color: #fff;
+  color: #d22856;
+}
+
+.download-app__btn:active {
+  background-color: #fff;
+  color: rgba(210, 40, 86, 0.3);
 }
 
 .download-app__store-link {
@@ -35,7 +48,7 @@
 
 .download-app__about {
   padding-bottom: 30px;
-  font-family: 'Open Sans Light';
+  font-weight: 200;
   color: #ffffff;
   text-align: center;
   font-size: 14px;
