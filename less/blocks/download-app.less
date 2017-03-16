@@ -15,35 +15,30 @@
   border: 3px solid #ffffff;
   border-radius: 50px;
   transition: 0.1s linear background-color, 0.1 s linear color;
-}
-
-.download-app__btn:hover {
-  background-color: #fff;
-  color: #d22856;
-}
-
-.download-app__btn:active {
-  background-color: #fff;
-  color: rgba(210, 40, 86, 0.3);
+  &:hover {
+    background-color: #fff;
+    color: #d22856;
+  }
+  &:active {
+    background-color: #fff;
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 .download-app__store-link {
   display: inline-block;
   padding-top: 30px;
   padding-bottom: 20px;
-}
-
-.download-app__store-link--apple {
-  padding-left: 35px;
-  padding-right: 30px;
-}
-
-.download-app__store-link--android {
-  padding-right: 30px;
-}
-
-.download-app__store-link--windows {
-  padding-right: 35px;
+  &--apple {
+    padding-left: 35px;
+    padding-right: 30px;
+  }
+  &--android {
+    padding-right: 30px;
+  }
+  &--windows {
+    padding-right: 35px;
+  }
 }
 
 .download-app__about {

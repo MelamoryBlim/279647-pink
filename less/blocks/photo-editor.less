@@ -14,10 +14,9 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: 30px;
-}
-
-.photo-editor__edit-btn--contrast {
-  margin-right: 0;
+  &--contrast {
+    margin-right: 0;
+  }
 }
 
 .photo-editor__post-btns {
@@ -36,6 +35,7 @@
 .photo-editor__submit-btn {
   cursor: pointer;
   display: block;
+  margin: 0 auto;
   padding: 15px 80px;
   font-family: 'Open Sans';
   font-size: 18px;
@@ -45,21 +45,20 @@
   border-radius: 50px 50px;
   background: none;
   transition: 0.1s linear color, 0.1s linear background-color;
-}
-
-.photo-editor__submit-btn:hover {
-  color: #ffffff;
-  background-color: #d22856;
-}
-
-.photo-editor__submit-btn:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #d22856;
+  &:hover {
+    color: #ffffff;
+    background-color: #d22856;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #d22856;
+  }
 }
 
 .photo-editor__reset-btn {
   cursor: pointer;
   display: block;
+  margin: 0 auto;
   padding: 15px 92px;
   margin-top: 10px;
   font-family: 'Open Sans';
@@ -70,15 +69,13 @@
   border-radius: 50px 50px;
   background: none;
   transition: 0.1s linear color, 0.1s linear background-color, 0.1s linear border;
-}
-
-.photo-editor__reset-btn:hover {
-  color: rgba(40, 54, 69, 0.3);
-  border: 3px solid rgba(40, 54, 69, 0.3);
-}
-
-.photo-editor__reset-btn:active {
-  color: rgba(255, 255, 255, 0.3);
-  border: 3px solid rgba(40, 54, 69, 0.1);
-  background-color: rgba(40, 54, 69, 0.3);
+  &:hover {
+    color: rgba(40, 54, 69, 0.3);
+    border: 3px solid rgba(40, 54, 69, 0.3);
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(40, 54, 69, 0.1);
+    background-color: rgba(40, 54, 69, 0.3);
+  }
 }

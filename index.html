@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -10,8 +11,10 @@
       <div class="page-header__top">
         <img class="page-header__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
       </div>
-      <nav class="main-nav">
-        <button class="main-nav__btn main-nav__toggle" type="button"><img class="main-nav__btn-open" src="img/icon-menu-burger.svg" alt="Меню"></button>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">Открыть меню
+        <img class="main-nav__burger" src="img/icon-menu-burger.svg" alt="">
+        <img class="main-nav__cross" src="img/icon-menu-cross.svg" alt=""></button>
         <ul class="main-nav__items">
           <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
@@ -54,74 +57,78 @@
       </section>
       <section class="reviews">
         <div class="reviews__wrapper slider">
-          <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
-          <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
-          <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
-          <div class="reviews__items">
-            <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-            <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-            <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
+          <input class="reviews__slider-input-1" type="radio" name="reviews" id="reviews-input-1" checked="">
+          <input class="reviews__slider-input-2" type="radio" name="reviews" id="reviews-input-2">
+          <input class="reviews__slider-input-3" type="radio" name="reviews" id="reviews-input-3">
+          <div class="reviews__slider-toggles">
+            <label for="reviews-input-1" class="reviews__slider-toggle reviews__slider-toggle-1"></label>
+            <label for="reviews-input-2" class="reviews__slider-toggle reviews__slider-toggle-2"></label>
+            <label for="reviews-input-3" class="reviews__slider-toggle reviews__slider-toggle-3"></label>
           </div>
-          <div class="reviews__toggles slider__toggles">
-            <label for="reviews-input-1" class="slider__toggle">1</label>
-            <label for="reviews-input-2" class="slider__toggle">2</label>
-            <label for="reviews-input-3" class="slider__toggle">3</label>
+          <div class="reviews__inner">
+            <div class="reviews__items">
+              <blockquote class="reviews__item slider__item">
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+              <blockquote class="reviews__item slider__item">
+                <cite class="reviews__author-name">Иван Попов</cite>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+              <blockquote class="reviews__item slider__item">
+                <cite class="reviews__author-name">Петя Васечкин</cite>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+            </div>
           </div>
         </div>
       </section>
       <section class="price">
         <div class="price__wrapper slider">
-          <input type="radio" class="slider__input" name="price" id="price-input-1">
-          <input type="radio" class="slider__input" name="price" id="price-input-2" checked>
-          <input type="radio" class="slider__input" name="price" id="price-input-3">
-          <div class="price__items">
-            <div class="price__item slider__item">
-              <div class="price__item-top">
-                <h2 class="price__item-title">База</h2>
-                <span class="price__item-cost">1,99 USD</span>
-              </div>
-              <ul class="price__list">
-                <li class="price__list-item price__list-item--included">Розовый фильтр</li>
-                <li class="price__list-item price__list-item--excluded">Смайлики</li>
-                <li class="price__list-item price__list-item--excluded">Комментарии</li>
-              </ul>
-            </div>
-            <div class="price__item slider__item">
-              <div class="price__item-top price__item--hit">
-                <h2 class="price__item-title">Стандарт</h2>
-                <span class="price__item-cost">3,99 USD</span>
-              </div>
-              <ul class="price__list">
-                <li class="price__list-item price__list-item--included">Розовый фильтр</li>
-                <li class="price__list-item price__list-item--included">Смайлики</li>
-                <li class="price__list-item price__list-item--excluded">Комментарии</li>
-              </ul>
-            </div>
-            <div class="price__item slider__item">
-              <div class="price__item-top">
-                <h2 class="price__item-title">Анлим</h2>
-                <span class="price__item-cost">9,99 USD</span>
-              </div>
-              <ul class="price__list">
-                <li class="price__list-item price__list-item--included">Розовый фильтр</li>
-                <li class="price__list-item price__list-item--included">Смайлики</li>
-                <li class="price__list-item price__list-item--included">Комментарии</li>
-              </ul>
-            </div>
+          <input type="radio" class="price__slider-input-1" name="price" id="price-input-1">
+          <input type="radio" class="price__slider-input-2" name="price" id="price-input-2" checked="">
+          <input type="radio" class="price__slider-input-3" name="price" id="price-input-3">
+          <div class="price__slider-toggles">
+            <label for="price-input-1" class="price__slider-toggle price__slider-toggle-1"></label>
+            <label for="price-input-2" class="price__slider-toggle price__slider-toggle-2"></label>
+            <label for="price-input-3" class="price__slider-toggle price__slider-toggle-3"></label>
           </div>
-          <div class="price__toggles slider__toggles">
-            <label for="price-input-1" class="slider__toggle">1</label>
-            <label for="price-input-2" class="slider__toggle">2</label>
-            <label for="price-input-3" class="slider__toggle">3</label>
+          <div class="price__inner">
+            <div class="price__items">
+              <div class="price__item slider__item">
+                <div class="price__item-top">
+                  <h2 class="price__item-title">База</h2>
+                  <span class="price__item-cost">1,99 USD</span>
+                </div>
+                <ul class="price__list">
+                  <li class="price__list-item price__list-item--included">Розовый фильтр</li>
+                  <li class="price__list-item price__list-item--excluded">Смайлики</li>
+                  <li class="price__list-item price__list-item--excluded">Комментарии</li>
+                </ul>
+              </div>
+              <div class="price__item slider__item">
+                <div class="price__item-top price__item--hit">
+                  <h2 class="price__item-title">Стандарт</h2>
+                  <span class="price__item-cost">3,99 USD</span>
+                </div>
+                <ul class="price__list">
+                  <li class="price__list-item price__list-item--included">Розовый фильтр</li>
+                  <li class="price__list-item price__list-item--included">Смайлики</li>
+                  <li class="price__list-item price__list-item--excluded">Комментарии</li>
+                </ul>
+              </div>
+              <div class="price__item slider__item">
+                <div class="price__item-top">
+                  <h2 class="price__item-title">Анлим</h2>
+                  <span class="price__item-cost">9,99 USD</span>
+                </div>
+                <ul class="price__list">
+                  <li class="price__list-item price__list-item--included">Розовый фильтр</li>
+                  <li class="price__list-item price__list-item--included">Смайлики</li>
+                  <li class="price__list-item price__list-item--included">Комментарии</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -141,5 +148,6 @@
         <div class="contacts__map"></div>
       </section>
     </main>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,4 +1,6 @@
 .reviews {
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #ffffff;
 }
 
@@ -10,9 +12,25 @@
   padding-bottom: 20px;
 }
 
+.reviews__wrapper input[type=radio] {
+  display: none;
+}
+
+.reviews__inner {
+  overflow: hidden;
+}
+
+.reviews__items {
+  width: 300%;
+  transition: transform 0.8s ease;
+}
+
 .reviews__item {
-  width: 100%;
+  display: inline-block;
+  margin: 0;
+  width: 280px;
   text-align: center;
+  float: left;
 }
 
 .reviews__author-name {
@@ -26,4 +44,47 @@
   font-size: 14px;
   color: #283645;
   line-height: 2.2;
+}
+
+.reviews__slider-toggles {
+  text-align: center;
+  position: relative;
+  top: 250px;
+}
+
+.reviews__slider-toggle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #bec2c7;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: 0.1 linear background-color;
+  &:hover {
+    background-color: #7e868f;
+  }
+  &:active {
+    background-color: #e9ebec;
+  }
+}
+
+.reviews__slider-input-1:checked ~ .reviews__slider-toggles .reviews__slider-toggle-1,
+.reviews__slider-input-2:checked ~ .reviews__slider-toggles .reviews__slider-toggle-2,
+.reviews__slider-input-3:checked ~ .reviews__slider-toggles .reviews__slider-toggle-3 {
+  border: 2px solid #283645;
+  background-color: #fff;
+}
+
+.reviews__slider-input-1:checked ~ .reviews__inner .reviews__items {
+  transform: translate(0);
+}
+
+.reviews__slider-input-2:checked ~ .reviews__inner .reviews__items {
+  transform: translate(-280px);
+}
+
+.reviews__slider-input-3:checked ~ .reviews__inner .reviews__items {
+  transform: translate(-560px);
 }

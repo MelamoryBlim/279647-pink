@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Конкурс | HTML Academy: Пинк</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -11,8 +11,10 @@
       <div class="page-header__top">
         <img class="page-header__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
       </div>
-      <nav class="main-nav">
-        <button class="main-nav__btn main-nav__toggle" type="button"><img class="main-nav__btn-open" src="img/icon-menu-burger.svg" alt="Меню"></button>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">Открыть меню
+        <img class="main-nav__burger" src="img/icon-menu-burger.svg" alt="">
+        <img class="main-nav__cross" src="img/icon-menu-cross.svg" alt=""></button>
         <ul class="main-nav__items">
           <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
@@ -29,7 +31,7 @@
       </section>
       <form class="form" method="post" action="https://echo.htmlacademy.ru/">
         <section class="user-info">
-          <fieldset class="container">
+          <div class="container">
             <p class="user-info__about">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
             <label class="user-info__label" for="surname">Фамилия:</label>
             <input class="user-info__input" type="text" id="surname" placeholder="Укажите фамилию *" required>
@@ -37,65 +39,65 @@
             <input class="user-info__input" type="text" id="name" placeholder="Введите ваше имя *" required>
             <label class="user-info__label" for="patronymic">Отчество:</label>
             <input class="user-info__input" type="text" id="patronymic" placeholder="Ну и отчество тоже">
-          </fieldset>
+          </div>
         </section>
         <section class="achievements">
-          <fieldset class="container">
+          <div class="container">
             <legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
-            <p class="achievements__item">
+            <div class="achievements__item">
               <input class="achievements__checkbox" type="checkbox" id="achievements__item-1" checked>
               <label class="achievements__label" for="achievements__item-1">Сделал селфи с акулой</label>
-            </p>
-            <p class="achievements__item">
+            </div>
+            <div class="achievements__item">
               <input class="achievements__checkbox" type="checkbox" id="achievements__item-2" checked>
               <label class="achievements__label" for="achievements__item-2">Обгорел на пляже</label>
-            </p>
-            <p class="achievements__item">
+            </div>
+            <div class="achievements__item">
               <input class="achievements__checkbox" type="checkbox" id="achievements__item-3">
               <label class="achievements__label" for="achievements__item-3">Видел Чака Норриса</label>
-            </p>
-            <p class="achievements__item">
+            </div>
+            <div class="achievements__item">
               <input class="achievements__checkbox" type="checkbox" id="achievements__item-4">
               <label class="achievements__label" for="achievements__item-4">Накупил сувениров</label>
-            </p>
-            <p class="achievements__item">
+            </div>
+            <div class="achievements__item">
               <input class="achievements__checkbox" type="checkbox" id="achievements__item-5" checked>
               <label class="achievements__label" for="achievements__item-5">Удержал башню</label>
-            </p>
-            <p class="achievements__item">
+            </div>
+            <div class="achievements__item">
               <input class="achievements__checkbox" type="checkbox" id="achievements__item-6">
               <label class="achievements__label" for="achievements__item-6">Разгромил отель</label>
-            </p>
-          </fieldset>
+            </div>
+          </div>
         </section>
         <section class="contacts-form">
-          <fieldset class="container">
-            <p class="contacts-form__item">
+          <div class="container">
+            <div class="contacts-form__item">
               <label class="contacts-form__label" for="phone">Номер телефона</label>
               <input class="contacts-form__input" type="tel" id="phone" placeholder="Номер, пожалуйста">
-            </p>
-            <p class="contacts-form__item">
+            </div>
+            <div class="contacts-form__item">
               <label class="contacts-form__label" for="email">Адрес почты</label>
               <input class="contacts-form__input" type="email" id="email" placeholder="Введите почту *" required>
-            </p>
-          </fieldset>
+            </div>
+          </div>
         </section>
         <section class="app-poll">
-          <fieldset class="container">
-            <legend class="app-poll__title">С каким приложением путешествовали?</legend>
-            <p class="app-poll__item">
+          <div class="container">
+            <h2 class="app-poll__title">С каким приложением путешествовали?</h2>
+            <div class="app-poll__item">
               <input class="app-poll__checkbox" type="checkbox" id="ios" checked>
               <label class="app-poll_label" for="ios">Pink для iOS</label>
-            </p>
-            <p class="app-poll__item">
+            </div>
+            <div class="app-poll__item">
               <input class="app-poll__checkbox" type="checkbox" id="android">
               <label class="app-poll_label" for="android">Pink на Android</label>
-            </p>
-            <p class="app-poll__item">
+            </div>
+            <div class="app-poll__item">
               <input class="app-poll__checkbox" type="checkbox" id="windows">
               <label class="app-poll_label" for="windows">Windows Phone</label>
-            </p>
-          </fieldset>
+            </div>
+          </div>
         </section>
         <section class="review-form">
           <fieldset class="container">
@@ -112,13 +114,14 @@
     <footer class="page-footer">
       <div class="container">
         <img class="page-footer__logo-glasses-img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
-        <div class="page-footer__social-links">
-          <a class="page-footer__social-link page-footer__social-link--twitter" href="#"><img class="page-footer__social-link-icon" src="img/icon-twitter.svg" alt="Twitter"></a>
-          <a class="page-footer__social-link page-footer__social-link--facebook" href="#"><img class="page-footer__social-link-icon" src="img/icon-facebook.svg" alt="Facebook"></a>
-          <a class="page-footer__social-link page-footer__social-link--youtube" href="#"><img class="page-footer__social-link-icon" src="img/icon-youtube.svg" alt="Youtube"></a>
+        <div class="social-links">
+          <a class="social-link social-link--twitter" href="#"><img class="social-link__icon" src="img/icon-twitter.svg" alt="Twitter"></a>
+          <a class="social-link social-link--facebook" href="#"><img class="social-link__icon" src="img/icon-facebook.svg" alt="Facebook"></a>
+          <a class="social-link social-link--youtube" href="#"><img class="social-link__icon" src="img/icon-youtube.svg" alt="Youtube"></a>
         </div>
         <span class="page-footer__copyright">Разработано <a class="page-footer__copyright-link" href="https://htmlacademy.ru/"><img class="page-footer__copyright-logo" src="img/htmlacademy.svg" alt="HTML Academy"></a></span>
       </div>
     </footer>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>
