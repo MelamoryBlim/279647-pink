@@ -1,7 +1,3 @@
-.form {
-  padding-bottom: 30px;
-}
-
 .form__btn {
   display: block;
   margin: 0 auto;
@@ -13,16 +9,15 @@
   text-transform: uppercase;
   font-weight: bold;
   color: #ffffff;
+  cursor: pointer;
   transition: 0.1s linear color, 0.1s linear background-color;
-}
-
-.form__btn:hover {
-  background-color: #1c9b5e;
-}
-
-.form__btn:active {
-  background-color: #1c9b5e;
-  color: rgba(255, 255, 255, 0.3);
+  &:hover {
+    background-color: #1c9b5e;
+  }
+  &:active {
+    background-color: #1c9b5e;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .form__required {
@@ -35,4 +30,27 @@
 
 .form__required--pink {
   color: #d22856;
+}
+
+@media @mobile-widths-only {
+  .form {
+    padding-bottom: 30px;
+  }
+}
+
+@media @tablet-widths {
+  .form {
+    padding-bottom: 50px;
+  }
+
+  .form__btn {
+    float: left;
+  }
+
+  .form__required {
+    float: right;
+    &--pink {
+      float: none;
+    }
+  }
 }

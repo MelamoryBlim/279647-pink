@@ -1,25 +1,97 @@
-.advantages {
-  background-color: #f2f2f2;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: center 110%;
-  padding-top: 50px;
-  padding-bottom: 300px;
+@media @mobile-widths-only {
+  .advantages {
+    background-color: #f2f2f2;
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center 110%;
+    padding-top: 50px;
+    padding-bottom: 300px;
+  }
+
+  .advantages__item {
+    text-align: center;
+  }
+
+  .advantages__title {
+    color: #283645;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .advantages__text {
+    padding-bottom: 20px;
+    color: #283645;
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
-.advantages__item {
-  text-align: center;
+@media @tablet-widths {
+  .advantages {
+    padding-top: 75px;
+    padding-bottom: 40px;
+    background-color: #f2f2f2;
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 40px 10px;
+    background-size: 268px 547px;
+  }
+
+  .advantages__item {
+    width: 310px;
+    margin-left: 310px;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  .advantages__title {
+    color: #283645;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .advantages__text {
+    padding-bottom: 20px;
+    color: #283645;
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
-.advantages__title {
-  color: #000000;
-  font-size: 18px;
-  font-weight: bold;
-}
+@media @desktop-widths {
+  .advantages {
+    padding-top: 350px;
+    background-color: #f2f2f2;
+    background-image: none;
+  }
 
-.advantages__text {
-  padding-bottom: 20px;
-  color: #000;
-  font-size: 14px;
-  line-height: 1.4;
+  .advantages__item {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 240px;
+    margin: 0;
+    margin-right: 78px;
+    padding: 0;
+    &:first-child {
+      margin-left: 32px;
+    }
+    &:last-child {
+      margin-right: 32px;
+    }
+  }
+
+  .advantages__title {
+    font-family: "Open Sans Bold";
+    color: #283645;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .advantages__text {
+    padding-bottom: 20px;
+    color: #283645;
+    font-size: 18px;
+    line-height: 1.4;
+  }
 }

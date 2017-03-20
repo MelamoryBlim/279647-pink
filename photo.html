@@ -7,29 +7,32 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--photo">
       <div class="page-header__top">
-        <img class="page-header__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
+        <div class="page-header__wrapper">
+          <img class="page-header__logo-img page-header__logo-img--mobile" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
+          <img class="page-header__logo-img page-header__logo-img--tablet-desktop" src="img/logo-pink-blue-mobile.svg" alt="Логотип Pink">
+        </div>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button">Открыть меню
-        <img class="main-nav__burger" src="img/icon-menu-burger.svg" alt="">
-        <img class="main-nav__cross" src="img/icon-menu-cross.svg" alt=""></button>
+        <div class="page-header__wrapper">
+          <button class="main-nav__toggle" type="button">Открыть меню
+          <img class="main-nav__burger" src="img/icon-menu-burger.svg" alt="">
+          <img class="main-nav__cross" src="img/icon-menu-cross.svg" alt=""></button>
+        </div>
         <ul class="main-nav__items">
           <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active-link" href="photo.html">Фотографии</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
         </ul>
       </nav>
+      <div class="page-header__title-wrapper">
+        <h1 class="page-header__title">Фотографии пользователей</h1>
+      </div>
     </header>
     <main>
       <section class="users-photos">
-        <div class="users-photos__title-container">
-          <div class="container">
-            <h1 class="users-photos__title">Фотографии пользователей</h1>
-          </div>
-        </div>
         <div class="users-photos__intro">
           <div class="container">
             <p class="users-photos__intro-text">Взгляните на фотографии, которые выкладывают пользователи!</p>
@@ -49,81 +52,83 @@
             </div>
           </div>
         </div>
-        <div class="pink-post">
-          <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-1-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
-          <div class="pink-post__caption">
-            <a href="#" class="pink-post__author">Левон</a>
-            <span class="pink-post__date">(5 часов назад)</span>
-            <p class="pink-post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <div class="pink-post__likes">
-              <a href="#" class="pink-post__like-icon"></a>
-              <span class="pink-post__like-link">Нравится:</span>
-              <span class="pink-post__like-count">356</span>
+        <div class="users-photos__wrapper clearfix">
+          <div class="pink-post">
+            <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-1-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
+            <div class="pink-post__caption">
+              <a href="#" class="pink-post__author">Левон</a>
+              <span class="pink-post__date">(5 часов назад)</span>
+              <p class="pink-post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="pink-post__likes">
+                <a href="#" class="pink-post__like-icon"></a>
+                <span class="pink-post__like-link">Нравится:</span>
+                <span class="pink-post__like-count">356</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pink-post">
-          <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-2-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
-          <div class="pink-post__caption">
-            <a href="#" class="pink-post__author">Антон</a>
-            <span class="pink-post__date">(12 часов назад)</span>
-            <p class="pink-post__text">Соседи будут рады!</p>
-            <div class="pink-post__likes">
-              <a href="#" class="pink-post__like-icon"></a>
-              <span class="pink-post__like-link">Нравится:</span>
-              <span class="pink-post__like-count">666</span>
+          <div class="pink-post">
+            <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-2-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
+            <div class="pink-post__caption">
+              <a href="#" class="pink-post__author">Антон</a>
+              <span class="pink-post__date">(12 часов назад)</span>
+              <p class="pink-post__text">Соседи будут рады!</p>
+              <div class="pink-post__likes">
+                <a href="#" class="pink-post__like-icon"></a>
+                <span class="pink-post__like-link">Нравится:</span>
+                <span class="pink-post__like-count">666</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pink-post">
-          <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-3-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
-          <div class="pink-post__caption">
-            <a href="#" class="pink-post__author">Борис</a>
-            <span class="pink-post__date">(20 часов назад)</span>
-            <p class="pink-post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <div class="pink-post__likes">
-              <a href="#" class="pink-post__like-icon"></a>
-              <span class="pink-post__like-link">Нравится:</span>
-              <span class="pink-post__like-count">215</span>
+          <div class="pink-post">
+            <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-3-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
+            <div class="pink-post__caption">
+              <a href="#" class="pink-post__author">Борис</a>
+              <span class="pink-post__date">(20 часов назад)</span>
+              <p class="pink-post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="pink-post__likes">
+                <a href="#" class="pink-post__like-icon"></a>
+                <span class="pink-post__like-link">Нравится:</span>
+                <span class="pink-post__like-count">215</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pink-post">
-          <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-4-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
-          <div class="pink-post__caption">
-            <a href="#" class="pink-post__author">Сергей</a>
-            <span class="pink-post__date">(25 часов назад)</span>
-            <p class="pink-post__text">Самая кубанская в мире!</p>
-            <div class="pink-post__likes">
-              <a href="#" class="pink-post__like-icon"></a>
-              <span class="pink-post__like-link">Нравится:</span>
-              <span class="pink-post__like-count">4</span>
+          <div class="pink-post">
+            <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-4-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
+            <div class="pink-post__caption">
+              <a href="#" class="pink-post__author">Сергей</a>
+              <span class="pink-post__date">(25 часов назад)</span>
+              <p class="pink-post__text">Самая кубанская в мире!</p>
+              <div class="pink-post__likes">
+                <a href="#" class="pink-post__like-icon"></a>
+                <span class="pink-post__like-link">Нравится:</span>
+                <span class="pink-post__like-count">4</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pink-post">
-          <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-5-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
-          <div class="pink-post__caption">
-            <a href="#" class="pink-post__author">Максим</a>
-            <span class="pink-post__date">(40 часов назад)</span>
-            <p class="pink-post__text">Где снег-то?</p>
-            <div class="pink-post__likes">
-              <a href="#" class="pink-post__like-icon"></a>
-              <span class="pink-post__like-link">Нравится:</span>
-              <span class="pink-post__like-count">150</span>
+          <div class="pink-post">
+            <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-5-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
+            <div class="pink-post__caption">
+              <a href="#" class="pink-post__author">Максим</a>
+              <span class="pink-post__date">(40 часов назад)</span>
+              <p class="pink-post__text">Где снег-то?</p>
+              <div class="pink-post__likes">
+                <a href="#" class="pink-post__like-icon"></a>
+                <span class="pink-post__like-link">Нравится:</span>
+                <span class="pink-post__like-count">150</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pink-post">
-          <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-6-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
-          <div class="pink-post__caption">
-            <a href="#" class="pink-post__author">Надежда</a>
-            <span class="pink-post__date">(45 часов назад)</span>
-            <p class="pink-post__text">Всем GM и взаимные лайки!</p>
-            <div class="pink-post__likes">
-              <a href="#" class="pink-post__like-icon"></a>
-              <span class="pink-post__like-link">Нравится:</span>
-              <span class="pink-post__like-count">2560</span>
+          <div class="pink-post">
+            <a href="#" class="pink-post__fullsize-link"><img class="pink-post__img" src="img/photo-6-mobile@1x.jpg" alt="Фото пользователя Пинк"></a>
+            <div class="pink-post__caption">
+              <a href="#" class="pink-post__author">Надежда</a>
+              <span class="pink-post__date">(45 часов назад)</span>
+              <p class="pink-post__text">Всем GM и взаимные лайки!</p>
+              <div class="pink-post__likes">
+                <a href="#" class="pink-post__like-icon"></a>
+                <span class="pink-post__like-link">Нравится:</span>
+                <span class="pink-post__like-count">2560</span>
+              </div>
             </div>
           </div>
         </div>
@@ -135,13 +140,15 @@
         </div>
       </section>
       <section class="photo-editor">
-        <div class="container">
-          <img src="img/photo-7-mobile@1x.jpg" alt="Редактируемая фотография">
+        <div class="container clearfix">
+          <img class="photo-editor__img" src="img/photo-7-mobile@1x.jpg" alt="Редактируемая фотография">
           <form action="https://echo.htmlacademy.ru/" class="photo-editor__form">
             <div class="photo-editor__edit-btns">
-              <label class="photo-editor__edit-btn photo-editor__edit-btn--crop" for="crop"><img src="img/icon-editor-crop.svg" alt=""></label>
-              <label class="photo-editor__edit-btn photo-editor__edit-btn--color" for="color"><img src="img/icon-editor-fill.svg" alt=""></label>
-              <label class="photo-editor__edit-btn photo-editor__edit-btn--contrast" for="contrast"><img src="img/icon-editor-contrast.svg" alt=""></label>
+              <label class="photo-editor__edit-btn photo-editor__edit-btn--crop" for="crop"><img class="photo-editor__edit-icon photo-editor__edit-icon--crop" src="img/icon-editor-crop.svg" alt=""></label>
+              <label class="photo-editor__edit-btn photo-editor__edit-btn--color" for="color"><img class="photo-editor__edit-icon photo-editor__edit-icon--color" src="img/icon-editor-fill.svg" alt=""></label>
+              <label class="photo-editor__edit-btn photo-editor__edit-btn--contrast" for="contrast"><img class="photo-editor__edit-icon photo-editor__edit-icon--contrast" src="img/icon-editor-contrast.svg" alt=""></label>
+            </div>
+            <div class="photo-editor__sliders">
               <input class="photo-editor__slider photo-editor__slider--crop" type="range" name="crop" id="crop">
               <input class="photo-editor__slider photo-editor__slider--color" type="range" name="color" id="color">
               <input class="photo-editor__slider photo-editor__slider--contrast" type="range" name="contrast" id="contrast">
@@ -155,7 +162,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="container">
+      <div class="container clearfix">
         <img class="page-footer__logo-glasses-img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
         <div class="social-links">
           <a class="social-link social-link--twitter" href="#"><img class="social-link__icon" src="img/icon-twitter.svg" alt="Twitter"></a>

@@ -7,105 +7,140 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__top">
-        <img class="page-header__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
+    <div class="pop-up pop-up--success">
+      <div class="pop-up__wrapper">
+        <h2 class="pop-up__title">Ваша заявка отправлена</h2>
+        <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
       </div>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button">Открыть меню
-        <img class="main-nav__burger" src="img/icon-menu-burger.svg" alt="">
-        <img class="main-nav__cross" src="img/icon-menu-cross.svg" alt=""></button>
+      <div class="pop-up__btn-wrapper">
+        <button class="pop-up__btn">Закрыть окно</button>
+      </div>
+    </div>
+    <div class="pop-up pop-up--failure">
+      <div class="pop-up__wrapper">
+        <h2 class="pop-up__title">Что-то пошло не так!</h2>
+        <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      </div>
+      <div class="pop-up__btn-wrapper">
+        <button class="pop-up__btn">Ок</button>
+      </div>
+    </div>
+    <header class="page-header page-header--form">
+      <div class="page-header__top">
+        <div class="page-header__wrapper">
+          <img class="page-header__logo-img page-header__logo-img--mobile" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
+          <img class="page-header__logo-img page-header__logo-img--tablet-desktop" src="img/logo-pink-blue-mobile.svg" alt="Логотип Pink">
+        </div>
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs clearfix">
+        <div class="page-header__wrapper">
+          <button class="main-nav__toggle" type="button">Открыть меню
+          <img class="main-nav__burger" src="img/icon-menu-burger.svg" alt="">
+          <img class="main-nav__cross" src="img/icon-menu-cross.svg" alt=""></button>
+        </div>
         <ul class="main-nav__items">
           <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active-link" href="form.html">Конкурс</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
         </ul>
       </nav>
+      <div class="page-header__title-wrapper">
+        <h1 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
     </header>
     <main>
-      <section class="form-promo">
-        <div class="container">
-          <h1 class="form-promo__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        </div>
-      </section>
       <form class="form" method="post" action="https://echo.htmlacademy.ru/">
         <section class="user-info">
           <div class="container">
             <p class="user-info__about">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-            <label class="user-info__label" for="surname">Фамилия:</label>
-            <input class="user-info__input" type="text" id="surname" placeholder="Укажите фамилию *" required>
-            <label class="user-info__label" for="name">Имя:</label>
-            <input class="user-info__input" type="text" id="name" placeholder="Введите ваше имя *" required>
-            <label class="user-info__label" for="patronymic">Отчество:</label>
-            <input class="user-info__input" type="text" id="patronymic" placeholder="Ну и отчество тоже">
+            <p class="user-info__about user-info__about--hidden">Пожалуйста, заполните форму ниже:</p>
+            <div class="user-info__wrapper">
+              <label class="user-info__label" for="surname">Фамилия:</label>
+              <input class="user-info__input" type="text" id="surname" placeholder="Укажите фамилию *" required>
+            </div>
+            <div class="user-info__wrapper">
+                <label class="user-info__label" for="name">Имя:</label>
+                <input class="user-info__input" type="text" id="name" placeholder="Введите ваше имя *" required>
+            </div>
+            <div class="user-info__wrapper">
+              <label class="user-info__label" for="patronymic">Отчество:</label>
+              <input class="user-info__input" type="text" id="patronymic" placeholder="Ну и отчество тоже">
+            </div>
           </div>
         </section>
         <section class="achievements">
-          <div class="container">
-            <legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
-            <div class="achievements__item">
-              <input class="achievements__checkbox" type="checkbox" id="achievements__item-1" checked>
-              <label class="achievements__label" for="achievements__item-1">Сделал селфи с акулой</label>
+          <fieldset class="container clearfix">
+            <legend class="achievements__title" align="center">Ваши безбашенные достижения в путешествии</legend>
+            <div class="achievements__column">
+              <div class="achievements__item">
+                <input class="achievements__checkbox" type="checkbox" id="achievements__item-1" checked>
+                <label class="achievements__label" for="achievements__item-1">Сделал селфи с акулой</label>
+              </div>
+              <div class="achievements__item">
+                <input class="achievements__checkbox" type="checkbox" id="achievements__item-2" checked>
+                <label class="achievements__label" for="achievements__item-2">Обгорел на пляже</label>
+              </div>
             </div>
-            <div class="achievements__item">
-              <input class="achievements__checkbox" type="checkbox" id="achievements__item-2" checked>
-              <label class="achievements__label" for="achievements__item-2">Обгорел на пляже</label>
+            <div class="achievements__column">
+              <div class="achievements__item">
+                <input class="achievements__checkbox" type="checkbox" id="achievements__item-3">
+                <label class="achievements__label" for="achievements__item-3">Видел Чака Норриса</label>
+              </div>
+              <div class="achievements__item">
+                <input class="achievements__checkbox" type="checkbox" id="achievements__item-4">
+                <label class="achievements__label" for="achievements__item-4">Накупил сувениров</label>
+              </div>
             </div>
-            <div class="achievements__item">
-              <input class="achievements__checkbox" type="checkbox" id="achievements__item-3">
-              <label class="achievements__label" for="achievements__item-3">Видел Чака Норриса</label>
+            <div class="achievements__column">
+              <div class="achievements__item">
+                <input class="achievements__checkbox" type="checkbox" id="achievements__item-5" checked>
+                <label class="achievements__label" for="achievements__item-5">Удержал башню</label>
+              </div>
+              <div class="achievements__item">
+                <input class="achievements__checkbox" type="checkbox" id="achievements__item-6">
+                <label class="achievements__label" for="achievements__item-6">Разгромил отель</label>
+              </div>
             </div>
-            <div class="achievements__item">
-              <input class="achievements__checkbox" type="checkbox" id="achievements__item-4">
-              <label class="achievements__label" for="achievements__item-4">Накупил сувениров</label>
-            </div>
-            <div class="achievements__item">
-              <input class="achievements__checkbox" type="checkbox" id="achievements__item-5" checked>
-              <label class="achievements__label" for="achievements__item-5">Удержал башню</label>
-            </div>
-            <div class="achievements__item">
-              <input class="achievements__checkbox" type="checkbox" id="achievements__item-6">
-              <label class="achievements__label" for="achievements__item-6">Разгромил отель</label>
-            </div>
-          </div>
+          </fieldset>
         </section>
         <section class="contacts-form">
-          <div class="container">
+          <fieldset class="container">
+            <legend class="contacts-form__title" align="center">Контактная информация</legend>
             <div class="contacts-form__item">
               <label class="contacts-form__label" for="phone">Номер телефона</label>
-              <input class="contacts-form__input" type="tel" id="phone" placeholder="Номер, пожалуйста">
+              <input class="contacts-form__input contacts-form__input--tel" type="tel" id="phone" placeholder="Номер, пожалуйста">
             </div>
             <div class="contacts-form__item">
               <label class="contacts-form__label" for="email">Адрес почты</label>
-              <input class="contacts-form__input" type="email" id="email" placeholder="Введите почту *" required>
+              <input class="contacts-form__input contacts-form__input--email" type="email" id="email" placeholder="Введите почту *" required>
             </div>
-          </div>
+          </fieldset>
         </section>
         <section class="app-poll">
-          <div class="container">
-            <h2 class="app-poll__title">С каким приложением путешествовали?</h2>
+          <fieldset class="container">
+            <legend class="app-poll__title" align="center">С каким приложением путешествовали?</legend>
             <div class="app-poll__item">
-              <input class="app-poll__checkbox" type="checkbox" id="ios" checked>
+              <input class="app-poll__radio" type="radio" id="ios">
               <label class="app-poll_label" for="ios">Pink для iOS</label>
             </div>
             <div class="app-poll__item">
-              <input class="app-poll__checkbox" type="checkbox" id="android">
+              <input class="app-poll__radio" type="radio" id="android">
               <label class="app-poll_label" for="android">Pink на Android</label>
             </div>
             <div class="app-poll__item">
-              <input class="app-poll__checkbox" type="checkbox" id="windows">
+              <input class="app-poll__radio" type="radio" id="windows">
               <label class="app-poll_label" for="windows">Windows Phone</label>
-            </div>
+            </fieldset>
           </div>
         </section>
         <section class="review-form">
           <fieldset class="container">
-            <label class="review-form__label" for="review-textarea">Опишите свои эмоции</label>
+            <legend class="review-form__title" align="center">Опишите свои эмоции</legend>
             <textarea class="review-form__textarea" name="review-textarea" id="review-textarea" cols="30" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
         </section>
-        <div class="container">
+        <div class="container clearfix">
           <input class="form__btn" type="submit" value="Отправить форму">
           <p class="form__required"><span class="form__required form__required--pink">*</span> — обязательные поля</p>
         </div>
