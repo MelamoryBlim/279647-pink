@@ -1,55 +1,73 @@
-.page-footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  text-align: center;
-}
-
 .page-footer__logo-glasses-img {
-  width: 148px;
+  width: 150px;
 }
 
-.page-footer__social-links {
-  margin-top: 30px;
-  margin-bottom: 30px;
+@media @mobile-widths-only {
+  .page-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    &--hidden {
+      display: none;
+    }
+  }
+
+  .page-footer__copyright-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 27px;
+  }
 }
 
-.page-footer__social-link {
-  display: inline-block;
-  margin-right: 10px;
-  width: 45px;
-  vertical-align: middle;
-  border: 3px solid rgba(40, 54, 69, 0.1);
-  border-radius: 50%;
-  transition: 0.1s linear border;
+@media @tablet-widths {
+  .page-footer {
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  .page-footer__logo-glasses-img {
+    margin-right: 71px;
+    float: left;
 }
 
-.page-footer__social-link:hover {
-  border: 3px solid #2f3c4b;
+  .page-footer__copyright {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #283645;
+  }
+
+  .page-footer__copyright-logo {
+    display: inline-block;
+    vertical-align: middle;
+    height: 35px;
+  }
 }
 
-.page-footer__social-link:active {
-  border: 3px solid #e9ebec;
+@media @desktop-widths {
+  .page-footer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .page-footer__logo-glasses-img {
+    margin-right: 222px;
+    float: left;
 }
 
-.page-footer__social-link-icon {
-  margin-top: auto;
-}
+  .page-footer__copyright {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #283645;
+  }
 
-.page-footer__social-link--twitter {
-  padding: 13px 0;
-}
-
-.page-footer__social-link--facebook {
-  padding: 12px 1px;
-}
-
-.page-footer__social-link--youtube {
-  padding: 13px 0;
-  margin-right: 0;
-}
-
-.page-footer__copyright-logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 27px;
+  .page-footer__copyright-logo {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    margin-left: 5px;
+  }
 }

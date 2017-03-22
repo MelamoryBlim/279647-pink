@@ -1,0 +1,51 @@
+.social-link {
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+  width: 45px;
+  vertical-align: middle;
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+  transition: 0.1s linear border;
+  &:hover {
+    border: 3px solid #2f3c4b;
+  }
+  &:active {
+    border: 3px solid #e9ebec;
+  }
+  &--twitter {
+    padding: 13px 0;
+  }
+  &--facebook {
+    padding: 12px 1px;
+  }
+  &--youtube {
+    padding: 13px 0;
+    margin-right: 0;
+  }
+}
+
+.social-link__icon {
+  margin-top: auto;
+}
+
+@media @mobile-widths-only {
+  .social-links {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media @tablet-widths {
+  .social-links {
+    margin-right: 76px;
+    float: left;
+  }
+}
+
+@media @desktop-widths {
+  .social-links {
+    margin-right: 222px;
+    float: left;
+  }
+}

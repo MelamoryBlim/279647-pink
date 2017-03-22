@@ -1,15 +1,15 @@
 .price {
   background-color: #f2f2f2;
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 70px;
 }
 
-.price__wrapper {
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.price__wrapper input[type=radio] {
+  display: none;
+}
+
+.price__inner {
+  overflow: hidden;
 }
 
 .price__item-top {
@@ -30,7 +30,7 @@
 }
 
 .price__item-cost {
-  font-weight: 200;
+  font-family: "Open Sans Light";
   color: #ffffff;
   font-size: 24px;
 }
@@ -41,11 +41,262 @@
   margin: 0;
 }
 
-.price__list-item {
-  padding: 20px 25px;
-  margin-bottom: 2px;
-  background-color: #ffffff;
-  color: #283645;
-  font-size: 14px;
-  text-transform: uppercase;
+@media @mobile-widths-only {
+  .price__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .price__items {
+    width: 300%;
+    transition: transform 0.8s ease;
+  }
+
+  .price__item {
+    float: left;
+    width: 280px;
+    margin-right: 2px;
+    &--hidden {
+      display: none;
+    }
+  }
+
+  .price__item-hit {
+    position: relative;
+    top: -90px;
+    left: -50px;
+    transform: rotate(-45deg);
+    &::after {
+      content: "Хит";
+      position: absolute;
+      top: 16px;
+      left: 12px;
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+  }
+
+  .price__list-item {
+    padding: 20px 25px;
+    margin-bottom: 2px;
+    background-color: #ffffff;
+    color: #283645;
+    font-size: 14px;
+    text-transform: uppercase;
+    &--included {
+      background-image: url("../../img/icon-yes.svg");
+      background-repeat: no-repeat;
+      background-size: 31px 21px;
+      background-position: 240px center;
+    }
+    &--excluded {
+      background-image: url("../../img/icon-no.svg");
+      background-repeat: no-repeat;
+      background-size: 27px 26px;
+      background-position: 240px center;
+    }
+  }
+
+.price__slider-toggles {
+  text-align: center;
+  position: relative;
+  top: 320px;
+}
+
+.price__slider-toggle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #bec2c7;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: 0.1 linear background-color;
+  &:hover {
+    background-color: #7e868f;
+  }
+  &:active {
+    background-color: #e9ebec;
+  }
+}
+
+.price__slider-input-1:checked ~ .price__slider-toggles .price__slider-toggle-1,
+.price__slider-input-2:checked ~ .price__slider-toggles .price__slider-toggle-2,
+.price__slider-input-3:checked ~ .price__slider-toggles .price__slider-toggle-3 {
+  border: 2px solid #283645;
+  background-color: #fff;
+}
+
+.price__slider-input-1:checked ~ .price__inner .price__items {
+  transform: translate(0);
+}
+
+.price__slider-input-2:checked ~ .price__inner .price__items {
+  transform: translate(-260px);
+}
+
+.price__slider-input-3:checked ~ .price__inner .price__items {
+  transform: translate(-520px);
+}
+}
+
+@media @tablet-widths {
+  .price__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .price__item {
+    float: left;
+    width: 155px;
+  }
+
+  .price__item-hit {
+    position: relative;
+    top: -30px;
+    left: 0px;
+    transform: rotate(-45deg);
+    &::after {
+      content: "Хит";
+      position: absolute;
+      top: -25px;
+      left: 3px;
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+  }
+
+  .price__item--hidden {
+    width: 153px;
+    margin-top: 94px;
+    padding: 0;
+  }
+
+  .price__item-top {
+    border-right: 2px solid #e7e7e7;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .price__item--hidden .price__list-item {
+    padding: 12px 15px;
+    border-left: 2px solid #e7e7e7;
+  }
+
+  .price__list-item {
+    padding: 20px 25px;
+    background-color: #ffffff;
+    color: #283645;
+    font-size: 14px;
+    border-top: 2px solid #e7e7e7;
+    border-right: 2px solid #e7e7e7;
+    &--included {
+      background-image: url("../../img/icon-yes.svg");
+      background-repeat: no-repeat;
+      background-size: 31px 21px;
+      background-position: center;
+    }
+    &--excluded {
+      background-image: url("../../img/icon-no.svg");
+      background-repeat: no-repeat;
+      background-size: 27px 26px;
+      background-position: center;
+    }
+  }
+
+  .price__list .price__list-item:last-child {
+    border-bottom: 2px solid #e7e7e7;
+  }
+
+  .price__list-item--hidden {
+    font-size: 0;
+  }
+}
+
+@media @desktop-widths {
+  .price__wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .price__item {
+    float: left;
+    width: 235px;
+  }
+
+  .price__item-hit {
+    position: relative;
+    top: -55px;
+    left: -10px;
+    transform: rotate(-45deg);
+    &::after {
+      content: "Хит";
+      position: absolute;
+      top: -25px;
+      left: 3px;
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+  }
+
+  .price__item--hidden {
+    width: 235px;
+    margin-top: 94px;
+    padding: 0;
+  }
+
+  .price__item-top {
+    border-right: 2px solid #e7e7e7;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .price__item--hidden .price__list-item {
+    min-height: 0;
+    padding: 13px 15px 14px 15px;
+    border-left: 2px solid #e7e7e7;
+  }
+
+  .price__list-item {
+    min-height: 2px;
+    padding: 23px 25px;
+    background-color: #ffffff;
+    color: #283645;
+    font-size: 18px;
+    border-top: 2px solid #e7e7e7;
+    border-right: 2px solid #e7e7e7;
+    &--included {
+      background-image: url("../../img/icon-yes.svg");
+      background-repeat: no-repeat;
+      background-size: 31px 21px;
+      background-position: center;
+    }
+    &--excluded {
+      background-image: url("../../img/icon-no.svg");
+      background-repeat: no-repeat;
+      background-size: 27px 26px;
+      background-position: center;
+    }
+  }
+
+  .price__list .price__list-item:last-child {
+    border-bottom: 2px solid #e7e7e7;
+  }
+
+  .price__list-item--hidden {
+    font-size: 0;
+  }
 }
