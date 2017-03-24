@@ -2,25 +2,22 @@
   width: 150px;
 }
 
-@media @mobile-widths-only {
-  .page-footer {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-    &--hidden {
-      display: none;
-    }
-  }
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  display: none;
+}
 
-  .page-footer__copyright-logo {
-    display: inline-block;
-    vertical-align: middle;
-    width: 27px;
-  }
+.page-footer__copyright-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
 }
 
 @media @tablet-widths {
   .page-footer {
+    display: block;
     padding-top: 40px;
     padding-bottom: 35px;
   }

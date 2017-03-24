@@ -1,4 +1,3 @@
-@media @mobile-widths-only {
   .page-header {
     &--index {
       padding-bottom: 100px;
@@ -56,7 +55,6 @@
       display: none;
     }
   }
-}
 
 @media @tablet-widths {
   .page-header {
@@ -120,13 +118,16 @@
     &--mobile {
       display: none;
     }
+    &--tablet-desktop {
+      display: inline-block;
+    }
   }
 }
 
 @media @desktop-widths {
   .page-header {
     &--index {
-      padding-bottom: 188px;
+      padding-bottom: 100px;
       background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
       background-repeat: no-repeat, no-repeat;
       background-attachment: scroll, scroll;
@@ -189,6 +190,9 @@
     margin-top: 25px;
     &--mobile {
       display: none;
+    }
+    &--tablet-desktop {
+      display: inline-block;
     }
   }
 }
