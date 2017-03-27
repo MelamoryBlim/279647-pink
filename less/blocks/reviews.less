@@ -12,6 +12,11 @@
   overflow: hidden;
 }
 
+.reviews__prev-btn,
+.reviews__next-btn {
+  display: none;
+}
+
 .reviews__items {
   width: 300%;
   transition: transform 0.8s ease;
@@ -19,7 +24,6 @@
 
 .reviews__about-author {
   margin-top: 15px;
-  display: block;
   font-size: 14px;
   font-weight: normal;
 }
@@ -49,7 +53,8 @@
 }
 
 .reviews__item {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   width: 280px;
   text-align: center;
@@ -57,6 +62,7 @@
 }
 
 .reviews__author-name {
+  order: 1;
   font-size: 18px;
   color: #000;
   font-weight: bold;
@@ -68,6 +74,7 @@
 }
 
 .reviews__text {
+  order: 2;
   font-size: 14px;
   color: #283645;
   line-height: 2.2;
@@ -127,8 +134,7 @@
   }
 
   .reviews__author-name {
-    position: relative;
-    top: 190px;
+    order: 2;
     font-size: 20px;
     color: #000;
     font-weight: bold;
@@ -141,6 +147,7 @@
   }
 
   .reviews__text {
+    order: 1;
     font-size: 18px;
     color: #283645;
     line-height: 1.6;
@@ -192,34 +199,41 @@
     padding-bottom: 20px;
   }
 
-  .reviews__prev-btn {
+  .reviews__prev-btn,
+  .reviews__next-btn {
+    display: block;
     background: none;
     border: none;
     position: absolute;
     top: 145px;
-    left: -115px;
     width: 28px;
     height: 28px;
     border-top: 2px solid #bec2c7;
     border-left: 2px solid #bec2c7;
     border-radius: 1px;
-    transform: rotateZ(-45deg);
     cursor: pointer;
   }
 
+  .reviews__prev-btn {
+    left: -115px;
+    transform: rotateZ(-45deg);
+    &:hover {
+      border-color: #7e868f;
+    }
+    &:active {
+      border-color: rgba(40, 54, 69, 0.1);
+    }
+  }
+
   .reviews__next-btn {
-    background: none;
-    border: none;
-    position: absolute;
-    top: 145px;
     right: -115px;
-    width: 28px;
-    height: 28px;
-    border-top: 2px solid #bec2c7;
-    border-left: 2px solid #bec2c7;
-    border-radius: 1px;
     transform: rotateZ(135deg);
-    cursor: pointer;
+    &:hover {
+      border-color: #7e868f;
+    }
+    &:active {
+      border-color: rgba(40, 54, 69, 0.1);
+    }
   }
 
   .reviews__item {
@@ -232,8 +246,6 @@
   }
 
   .reviews__author-name {
-    position: relative;
-    top: 190px;
     font-size: 24px;
     color: #000;
     font-weight: bold;

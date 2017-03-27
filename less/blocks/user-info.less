@@ -13,6 +13,12 @@
   padding: 0 20px;
 }
 
+.user-info__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .user-info__about {
   margin-bottom: 40px;
   line-height: 1.2;
@@ -34,6 +40,8 @@
 }
 
 .user-info__input {
+  flex-grow: 1;
+  align-self: stretch;
   padding: 15px 20px;
   margin-bottom: 25px;
   font-family: 'Open Sans';
@@ -89,11 +97,9 @@
 
   .user-info__input {
     padding: 18px 20px;
-    margin-bottom: 25px;
     font-family: 'Open Sans';
     font-size: 18px;
     color: #283645;
-    width: 474px;
     border: 2px solid #e5e5e5;
     border-radius: 3px;
     transition: 0.1s linear border;
@@ -103,10 +109,6 @@
     &:active {
       border: 2px solid #d22856;
     }
-  }
-
-  .user-info__inner:nth-of-type(2) .user-info__input {
-    width: 515px;
   }
 }
 
@@ -124,6 +126,11 @@
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
+  }
+
+  .user-info__inner {
+    width: 430px;
+    margin-bottom: 50px;
   }
 
   .user-info__about {
@@ -144,11 +151,9 @@
 
   .user-info__input {
     padding: 18px 20px;
-    margin-bottom: 52px;
     font-family: 'Open Sans';
     font-size: 18px;
     color: #283645;
-    width: 290px;
     border: 2px solid #e5e5e5;
     border-radius: 3px;
     transition: 0.1s linear border;
@@ -158,9 +163,5 @@
     &:active {
       border: 2px solid #d22856;
     }
-  }
-
-  .user-info__inner:nth-of-type(2) .user-info__input {
-    width: 331px;
   }
 }

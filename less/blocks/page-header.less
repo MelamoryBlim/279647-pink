@@ -1,11 +1,13 @@
   .page-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     &--index {
-      padding-bottom: 100px;
-      background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
-      background-repeat: no-repeat, no-repeat;
-      background-attachment: scroll, scroll;
-      background-position: bottom center, center center;
-      background-size: 258px 286px, cover;
+      background-image: url("../img/bg-back-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: center center;
+      background-size: cover;
     }
     &--photo {
       min-height: 150px;
@@ -28,6 +30,10 @@
 }
 
   .page-header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 280px;
     margin: 0 auto;
     padding: 0 20px;
@@ -42,18 +48,31 @@
   }
 
   .page-header__top {
+    order: 1;
     width: 100%;
     height: 65px;
     background-color: rgba(0, 0, 0, 0.3);
   }
 
   .page-header__logo-img {
+    margin-top: 20px;
     width: 75px;
     height: 25px;
-    margin-top: 20px;
+    fill: #000000;
     &--tablet-desktop {
       display: none;
+      cursor: pointer;
+      &:hover .page-header__logo-symbol {
+        fill: #ba2b54;
+      }
+      &:active .page-header__logo-symbol {
+        fill: rgba(255, 255, 255, 0.3)
+      }
     }
+  }
+
+  .page-header__logo-img--tablet-desktop .page-header__logo-symbol {
+    fill: #ffffff;
   }
 
 @media @tablet-widths {
@@ -171,6 +190,7 @@
   }
 
   .page-header__title {
+    order: 2;
     text-align: center;
     font-family: "Open Sans Light";
     font-size: 50px;
@@ -179,6 +199,7 @@
   }
 
   .page-header__top {
+    order: 1;
     width: 100%;
     height: 110px;
     background-color: rgba(0, 0, 0, 0.3);
@@ -188,11 +209,12 @@
     width: 150px;
     height: 40px;
     margin-top: 25px;
+    margin-right: 170px;
     &--mobile {
       display: none;
     }
     &--tablet-desktop {
-      display: inline-block;
+      fill: #ffffff;
     }
   }
 }

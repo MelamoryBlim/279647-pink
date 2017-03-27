@@ -1,19 +1,24 @@
 .main-nav {
-  position: relative;
-  top: -56px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .main-nav__toggle {
-  position: relative;
-  right: -222px;
-  top: -5px;
-  z-index: 2;
   width: 50px;
   height: 25px;
+  margin-top: 20px;
   background: none;
   border: none;
   font-size: 0;
   cursor: pointer;
+  &:hover .main-nav__toggle-symbol {
+    fill: #d22856;
+  }
+  &:active .main-nav__toggle-symbol {
+    fill: rgba(210, 40, 86, 0.3);
+  }
 }
 
 .main-nav--closed .main-nav__item {
@@ -28,6 +33,11 @@
 .main-nav--opened .main-nav__burger,
 .main-nav--closed .main-nav__cross {
   display: none;
+}
+
+.main-nav__wrapper {
+  width: 280px;
+  padding-top: 4px;
 }
 
 .main-nav__items {
@@ -62,16 +72,8 @@
 }
 
 @media @tablet-widths {
-  .main-nav {
-    position: relative;
-    top: -56px;
-  }
-
   .main-nav__toggle {
-    position: relative;
-    right: -562px;
-    top: -30px;
-    z-index: 2;
+    margin-top: 40px;
     width: 50px;
     height: 25px;
     background: none;
@@ -94,9 +96,12 @@
     display: none;
   }
 
+  .main-nav__wrapper {
+    width: 620px;
+    margin-top: 22px;
+  }
 
   .main-nav__items {
-    width: 100%;
     list-style-type: none;
     padding-left: 0;
   }
@@ -129,8 +134,7 @@
 
 @media @desktop-widths {
   .main-nav {
-    position: relative;
-    top: -70px;
+    align-items: center;
   }
 
   .main-nav__toggle {

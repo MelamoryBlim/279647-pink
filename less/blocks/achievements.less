@@ -27,19 +27,15 @@
   margin-bottom: 65px;
 }
 
-.achievements__label {
-  font-size: 18px;
-  color: #283645;
-}
-
 .achievements input {
   display: none;
 }
 
-.achievements label {
+.achievements__label {
   position: relative;
   padding: 26px 0 26px 69px;
-
+  font-size: 18px;
+  color: #283645;
   &::before {
     content: '';
     cursor: pointer;
@@ -53,6 +49,19 @@
     background-color: #fff;
     transition: 0.1s linear border;
 }
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 33px;
+    z-index: 1;
+    width: 20px;
+    height: 8px;
+    border-bottom: 2px solid #d22856;
+    border-left: 2px solid #d22856;
+    transform: rotate(-45deg);
+  }
 }
 
 .achievements input:hover + label::before {
@@ -63,13 +72,9 @@
   border: 2px solid #d22856;
 }
 
-.achievements input:checked + label::before {
-  background-image: url("../img/icon-yes.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.achievements input:checked + label::after {
+  display: block;
 }
-
-
 
 @media @tablet-widths {
   .achievements {
