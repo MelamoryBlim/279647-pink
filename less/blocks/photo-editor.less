@@ -1,87 +1,149 @@
+.photo-editor {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: #f2f2f2;
+}
+
+.photo-editor__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.photo-editor__filters {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.photo-editor__title {
+  display: none;
+}
+
+.photo-editor__edit-btns {
+  margin-top: 35px;
+  text-align: center;
+  border: none;
+}
+
 .photo-editor__edit-btn {
   display: inline-block;
   vertical-align: middle;
   margin-right: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   &--contrast {
     margin-right: 0;
   }
+  &--crop .photo-editor__svg {
+    fill: #d22856;
+  }
+  &:hover .photo-editor__svg {
+    fill: #283645;
+  }
+  &:active .photo-editor__svg {
+    fill: #d22856;
+  }
+}
+
+.photo-editor__svg {
+  fill: rgba(40, 54, 69, 0.3);
+}
+
+.photo-editor__sliders {
+  margin-bottom: 30px;
+}
+
+.photo-editor__slider {
+  position: relative;
+}
+
+.photo-editor__slider-scale {
+  margin: 0 auto;
+  width: 240px;
+  height: 2px;
+  background-color: #283645;
+}
+
+.photo-editor__slider-toggle {
+  position: absolute;
+  background-color: #f2f2f2;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #d22856;
+  &--crop {
+    top: -6px;
+    left: 220px;
+  }
+}
+
+.photo-editor__slider--crop {
+  margin-top: 30px;
+}
+
+.photo-editor__slider--color,
+.photo-editor__slider--contrast {
+  visibility: hidden;
 }
 
 .photo-editor__post-btns {
-  border: none;
+  padding-top: 30px;
+  border-top: 1px solid rgba(40, 54, 69, 0.1);
 }
 
-
-
-@media @mobile-widths-only {
-  .photo-editor {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    background-color: #f2f2f2;
+  .photo-editor__submit-btn {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 80px;
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-weight: bold;
+  color: #d22856;
+  border: 3px solid #d22856;
+  border-radius: 50px 50px;
+  background: none;
+  transition: 0.1s linear color, 0.1s linear background-color;
+  &:hover {
+    color: #ffffff;
+    background-color: #d22856;
   }
-
-  .photo-editor__edit-btns {
-    margin-top: 35px;
-    text-align: center;
-    border: none;
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #d22856;
   }
+}
 
-  .photo-editor__slider--crop {
-    margin-top: 30px;
+.photo-editor__reset-btn {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 92px;
+  margin-top: 10px;
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(40, 54, 69, 0.1);
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50px 50px;
+  background: none;
+  transition: 0.1s linear color, 0.1s linear background-color, 0.1s linear border;
+  &:hover {
+    color: rgba(40, 54, 69, 0.3);
+    border: 3px solid rgba(40, 54, 69, 0.3);
   }
-
-  .photo-editor__slider--color,
-  .photo-editor__slider--contrast {
-    visibility: hidden;
-  }
-
-    .photo-editor__submit-btn {
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    padding: 15px 80px;
-    font-family: 'Open Sans';
-    font-size: 18px;
-    font-weight: bold;
-    color: #d22856;
-    border: 3px solid #d22856;
-    border-radius: 50px 50px;
-    background: none;
-    transition: 0.1s linear color, 0.1s linear background-color;
-    &:hover {
-      color: #ffffff;
-      background-color: #d22856;
-    }
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-      background-color: #d22856;
-    }
-  }
-
-  .photo-editor__reset-btn {
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    padding: 15px 92px;
-    margin-top: 10px;
-    font-family: 'Open Sans';
-    font-size: 18px;
-    font-weight: bold;
-    color: rgba(40, 54, 69, 0.1);
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
     border: 3px solid rgba(40, 54, 69, 0.1);
-    border-radius: 50px 50px;
-    background: none;
-    transition: 0.1s linear color, 0.1s linear background-color, 0.1s linear border;
-    &:hover {
-      color: rgba(40, 54, 69, 0.3);
-      border: 3px solid rgba(40, 54, 69, 0.3);
-    }
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-      border: 3px solid rgba(40, 54, 69, 0.1);
-      background-color: rgba(40, 54, 69, 0.3);
-    }
+    background-color: rgba(40, 54, 69, 0.3);
   }
 }
 
@@ -92,19 +154,26 @@
     background-color: #f2f2f2;
   }
 
+  .photo-editor__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
   .photo-editor__img {
-    float: left;
+    width: 300px;
     margin-right: 45px;
   }
 
   .photo-editor__edit-btns {
     width: 22px;
-    float: left;
+    margin-top: 0;
     margin-right: 30px;
   }
 
   .photo-editor__edit-btn {
     display: block;
+    width: 30px;
     padding-top: 12px;
     padding-bottom: 40px;
     &::after {
@@ -116,6 +185,9 @@
       height: 1px;
       background-color: #dddfe0;
     }
+    &--contrast {
+      margin-left: 5px;
+    }
   }
 
   .photo-editor__edit-icon {
@@ -126,19 +198,50 @@
   }
 
   .photo-editor__sliders {
-    margin-bottom: 13px;
+    margin-bottom: 30px;
     padding-top: 10px;
     width: 202px;
     float: left;
   }
 
   .photo-editor__slider {
-    margin-bottom: 53px;
     display: block;
+    position: relative;
+    margin-bottom: 75px;
+    &--crop {
+      margin-top: 10px;
+    }
+    &--color, &--contrast {
+      visibility: visible;
+    }
+  }
+
+  .photo-editor__slider-scale {
+    width: 200px;
+  }
+
+  .photo-editor__slider-toggle {
+    position: absolute;
+    top: -6px;
+    background-color: #f2f2f2;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    &--crop {
+      left: 140px;
+    }
+    &--color {
+      left: 25px;
+    }
+    &--contrast {
+      left: 90px;
+    }
   }
 
   .photo-editor__post-btns {
     float: left;
+    border: none;
   }
 
     .photo-editor__submit-btn {
@@ -193,15 +296,27 @@
 @media @desktop-widths {
   .photo-editor {
     background-color: #ffffff;
-    .container {
-      padding: 50px 60px 55px 80px;
-      background-color: #f2f2f2;
-    }
+  }
+
+  .photo-editor__inner {
+    width: 410px;
+  }
+
+  .photo-editor__filters {
+    width: 410px;
+    float: left;
+  }
+
+  .photo-editor__wrapper {
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px 60px 55px 80px;
+    background-color: #f2f2f2;
   }
 
   .photo-editor__img {
     width: 300px;
-    margin-right: 90px;
+    margin-right: 70px;
   }
 
   .photo-editor__edit-btns {
@@ -219,9 +334,12 @@
       display: block;
       position: relative;
       top: 8px;
-      width: 410px;
+      width: 380px;
       height: 1px;
       background-color: #dddfe0;
+    }
+    .photo-editor__svg {
+      fill: #d22856;
     }
   }
 
@@ -240,15 +358,42 @@
   }
 
   .photo-editor__slider {
-    margin-bottom: 45px;
     display: block;
+    position: relative;
+    margin-bottom: 65px;
+    &--crop {
+      margin-top: 10px;
+    }
+    &--color, &--contrast {
+      visibility: visible;
+    }
+  }
+
+  .photo-editor__slider-scale {
+    width: 290px;
+  }
+
+  .photo-editor__slider-toggle {
+    position: absolute;
+    top: -6px;
+    background-color: #f2f2f2;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    &--crop {
+      left: 75px;
+    }
     &--color {
-      margin-bottom: 40px;
+      left: 250px;
+    }
+    &--contrast {
+      left: 170px;
     }
   }
 
   .photo-editor__post-btns {
-    margin-top: 105px;
+    margin-top: 90px;
     width: 420px;
     float: left;
   }
@@ -300,105 +445,5 @@
       border: 3px solid rgba(40, 54, 69, 0.1);
       background-color: rgba(40, 54, 69, 0.3);
     }
-  }
-}
-
-.photo-editor {
-  input[type=range] {
-      -webkit-appearance: none;
-      background: transparent;
-      width: 100%;
-  }
-
-  input[type=range]:focus {
-    outline: none;
-  }
-
-  input[type=range]::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 2px;
-      background: #283645;
-      border: none;
-  }
-
-  input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      border: none;
-      display: block;
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      border: 2px solid #d22856;
-      background: #f2f2f2;
-      cursor: pointer;
-      margin-top: -5px;
-      transition: 0.1s linear background-color;
-  }
-  input[type=range]::-webkit-slider-thumb:hover {
-    background-position: 50% 50%;
-  }
-  input[type=range]::-webkit-slider-thumb:active {
-    background-color: #d22856;
-  }
-
-  input[type=range]:focus::-webkit-slider-runnable-track {
-      background: #283645;
-  }
-
-  input[type=range]::-moz-range-track {
-      width: 100%;
-      height: 2px;
-      background: #283645;
-      border: none;
-  }
-
-  input[type=range]::-moz-range-thumb {
-      border: none;
-      display: block;
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      border: 2px solid #d22856;
-      background: #f2f2f2;
-      cursor: pointer;
-      margin-top: -5px;
-      transition: 0.1s linear background-color;
-  }
-  input[type=range]::-moz-range-thumb:active {
-    background-color: #d22856;
-  }
-
-  input[type=range]:-moz-focusring {
-      outline: 1px solid white;
-      outline-offset: -1px;
-  }
-
-  input[type=range]::-ms-track {
-      width: 100%;
-      height: 5px;
-      background: transparent;
-      border-color: transparent;
-      border-width: 7px 0;
-      color: transparent;
-  }
-  input[type=range]::-ms-fill-lower {
-      background:  #283645;
-      border-radius: 10px;
-  }
-  input[type=range]::-ms-fill-upper {
-      background:  #283645;
-      border-radius: 10px;
-  }
-  input[type=range]::-ms-thumb {
-      border: none;
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      border: 2px solid #d22856;
-      background: #f2f2f2;
-      transition: 0.1s linear background-color;
-  }
-  input[type=range]::-ms-thumb:active {
-    background-color: #dd2856;
   }
 }

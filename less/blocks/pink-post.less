@@ -1,4 +1,55 @@
+.pink-post--panorama {
+  &::before {
+    content: 'Панорама дня';
+    width: 100px;
+    position: relative;
+    top: 34px;
+    left: 283px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #d22856;
+    padding: 10px 15px;
+  }
+}
+
+.pink-post__img--panorama {
+  width: 100%;
+}
+
+.pink-post {
+  display: flex;
+  flex-wrap: no-wrap;
+  flex-direction: column;
+  text-align: center;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  &--panorama {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.pink-post__caption {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 25px 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  text-align: left;
+  &--panorama {
+    width: 240px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
 .pink-post__fullsize-link {
+  width: 100%;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -19,12 +70,14 @@
 }
 
 .pink-post__text {
+  min-height: 47px;
   font-size: 14px;
   line-height: 1.7;
   color: #283645;
 }
 
 .pink-post__likes {
+  display: flex;
   font-size: 12px;
   text-transform: uppercase;
   color: #d22856;
@@ -35,78 +88,50 @@
   vertical-align: middle;
   width: 13px;
   height: 13px;
-  background-image: url("../img/icon-heart.svg");
-  background-repeat: no-repeat;
+  path {
+    fill: #d22856;
+  }
 }
 
-.pink-post__like-link,
 .pink-post__like-count {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.pink-post__like-link {
   margin-left: 20px;
 }
 
-@media @mobile-widths-only {
-  .pink-post--panorama {
-    &::before {
-      content: 'Панорама дня';
-      position: relative;
-      top: 26px;
-      left: 75px;
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #ffffff;
-      background-color: #d22856;
-      padding: 10px 15px;
-    }
-  }
-
-  .pink-post__img--panorama {
-    width: 100%;
-  }
-
-  .pink-post {
-    text-align: center;
-    width: 280px;
-    margin: 0 auto;
-    padding: 0 20px;
-    &--panorama {
-      width: 100%;
-      padding: 0;
-    }
-  }
-
-  .pink-post__caption {
-    padding: 25px 20px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    background-color: #f2f2f2;
-    text-align: left;
-    &--panorama {
-      width: 240px;
-      margin: 0 auto;
-      margin-bottom: 20px;
-    }
-  }
-}
-
 @media @tablet-widths {
+  .pink-post__likes {
+    justify-content: space-between;
+  }
+
+  .pink-post__like-icon {
+    order: 1;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
   .pink-post--panorama {
     &::before {
       content: 'Панорама дня';
       position: relative;
       top: 71px;
-      left: 595px;
+      left: 655px;
       font-size: 12px;
       font-weight: bold;
       text-transform: uppercase;
       color: #ffffff;
       background-color: #d22856;
       padding: 10px 15px;
+    }
+    .pink-post__about-author {
+      width: 290px;
+      order: -2;
+    }
+    .pink-post__likes {
+      width: 290px;
+      order: -1;
+      justify-content: flex-end;
+    }
+    .pink-post__like-count {
+      margin-right: 20px;
     }
   }
 
@@ -116,6 +141,7 @@
 
   .pink-post__caption {
     width: 260px;
+    min-height: 100px;
     padding: 25px 20px;
     margin-top: 0;
     margin-bottom: 20px;
@@ -125,6 +151,9 @@
       width: 580px;
       margin: 0 auto;
       margin-bottom: 40px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
     }
   }
 
@@ -134,15 +163,17 @@
     padding: 0 20px;
 
     .pink-post {
-      float: left;
-      &:nth-child(odd) {
-        margin-right: 20px;
-      }
+      width: 300px;
+      padding: 0;
     }
 
     .pink-post__img {
       width: 100%;
     }
+  }
+
+  .pink-post__like-count {
+    margin-left: 0;
   }
 }
 
@@ -151,14 +182,26 @@
     &::before {
       content: 'Панорама дня';
       position: relative;
-      top: 71px;
-      left: 1016px;
+      top: 70px;
+      left: 1015px;
       font-size: 12px;
       font-weight: bold;
       text-transform: uppercase;
       color: #ffffff;
       background-color: #d22856;
       padding: 10px 15px;
+    }
+    .pink-post__about-author {
+      width: 450px;
+      order: -2;
+    }
+    .pink-post__likes {
+      width: 430px;
+      order: -1;
+      justify-content: flex-end;
+    }
+    .pink-post__like-count {
+      margin-right: 20px;
     }
   }
 
@@ -177,6 +220,7 @@
       width: 900px;
       margin: 0 auto;
       margin-bottom: 40px;
+      padding: 20px 20px 0px 20px;
     }
   }
 
@@ -184,14 +228,6 @@
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
-
-    .pink-post {
-      float: left;
-      margin-right: 20px;
-      &:nth-child(3n+3) {
-        margin-right: 0;
-      }
-    }
 
     .pink-post__img {
       width: 100%;

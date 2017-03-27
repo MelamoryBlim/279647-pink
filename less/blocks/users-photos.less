@@ -1,52 +1,55 @@
-.users-photos__title-container {
-  padding-top: 100px;
-  padding-bottom: 80px;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
+.users-photos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.users-photos__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .users-photos__title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 200;
-  color: #ffffff;
+  display: none;
 }
 
+.users-photos__intro {
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
 
+.users-photos__intro-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 2.1;
+  color: #283645;
+}
 
-@media @mobile-widths-only {
-  .users-photos__intro {
-    background-color: #ffffff;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-  }
+.users-photos__outro {
+  padding-top: 25px;
+  padding-bottom: 45px;
+  text-align: center;
+}
 
-  .users-photos__intro-text {
-    margin: 0;
-    font-size: 14px;
-    line-height: 2.1;
-    color: #283645;
-  }
-
-  .users-photos__outro {
-    padding-top: 25px;
-    padding-bottom: 45px;
-    text-align: center;
-  }
-
-  .users-photos__outro-text {
-    margin: 0;
-    font-size: 14px;
-    color: #283645;
-    line-height: 2.1;
-  }
+.users-photos__outro-text {
+  margin: 0;
+  font-size: 14px;
+  color: #283645;
+  line-height: 2.1;
 }
 
 @media @tablet-widths {
+  .users-photos__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
   .users-photos__intro {
     background-color: #ffffff;
     padding-top: 90px;

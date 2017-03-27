@@ -1,46 +1,80 @@
-@media @mobile-widths-only {
-  .advantages {
-    background-color: #f2f2f2;
-    background-image: url("../img/iphone-screen-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: center 110%;
-    padding-top: 50px;
-    padding-bottom: 300px;
-  }
+.advantages {
+  background-color: #f2f2f2;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center 110%;
+  padding-bottom: 300px;
+}
 
-  .advantages__item {
-    text-align: center;
-  }
+.advantages__bg-triangle {
+  width: 100%;
+  height: 45px;
+}
 
-  .advantages__title {
-    color: #283645;
-    font-size: 18px;
-    font-weight: bold;
-  }
+.advantages__wrapper {
+  display: flex;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 50px;
+}
 
-  .advantages__text {
-    padding-bottom: 20px;
-    color: #283645;
-    font-size: 14px;
-    line-height: 1.4;
-  }
+.advantages__item {
+  text-align: center;
+}
+
+.advantages__title {
+  color: #283645;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.advantages__text {
+  padding-bottom: 20px;
+  color: #283645;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 @media @tablet-widths {
   .advantages {
-    padding-top: 75px;
-    padding-bottom: 40px;
-    background-color: #f2f2f2;
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .advantages__bg-triangle {
+    width: 100%;
+    height: 85px;
+  }
+
+  .advantages__bg-container {
+    width: 320px;
+    height: 480px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
-    background-position: 40px 10px;
+    background-position: 0px 0px;
+    background-attachment: scroll;
     background-size: 268px 547px;
   }
 
+  .advantages__inner {
+    padding-top: 40px;
+  }
+
+  .advantages__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #f2f2f2;
+}
+
   .advantages__item {
-    width: 310px;
-    margin-left: 310px;
-    padding-left: 10px;
+    width: 300px;
+    text-align: left;
+    padding-left: 20px;
     padding-right: 20px;
   }
 
@@ -60,13 +94,23 @@
 
 @media @desktop-widths {
   .advantages {
-    padding-top: 350px;
+    padding-top: 0;
     background-color: #f2f2f2;
+  }
+
+  .advantages__wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    padding-top: 350px;
     background-image: none;
   }
 
+  .advantages__bg-container {
+    display: none;
+  }
+
   .advantages__item {
-    display: inline-block;
     float: left;
     text-align: center;
     width: 240px;

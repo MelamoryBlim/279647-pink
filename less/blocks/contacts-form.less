@@ -3,6 +3,16 @@
   padding-bottom: 40px;
 }
 
+.contacts-form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border: none;
+}
+
 .contacts-form__label {
   font-size: 14px;
   color: #d22856;
@@ -29,33 +39,44 @@
   }
 }
 
-@media @mobile-widths-only {
-  .contacts-form__title {
-    display: none;
-  }
+.contacts-form__title {
+  font-weight: normal;
+  display: none;
 }
 
 @media @tablet-widths {
-  .contacts-form .container {
-    padding-top: 20px;
+  .contacts-form__wrapper {
+    width: 580px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    border: 2px solid #e5e5e5;
   }
 
   .contacts-form__title {
-    padding-right: 30px;
-    padding-left: 30px;
+    display: block;
+    position: relative;
+    top: -10px;
+    width: 200px;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-left: 25px;
     text-align: center;
     font-size: 14px;
     color: #d22856;
+    background-color: #ffffff;
     text-transform: uppercase;
   }
 
   .contacts-form__label {
     position: relative;
-    top: 105px;
-    left: 20px;
+    top: 85px;
+    left: 40px;
   }
 
   .contacts-form__input {
+    margin: 0 auto;
+    margin-bottom: 30px;
     width: 391px;
     border-right-width: 60px;
     &:hover {
@@ -70,16 +91,28 @@
 }
 
 @media @desktop-widths {
-  .contacts-form .container {
+  .contacts-form__wrapper {
+    position: relative;
+    width: 820px;
+    margin: 0 auto;
+    padding: 0 60px;
     padding-top: 20px;
+    padding-bottom: 50px;
   }
 
   .contacts-form__title {
-    padding-right: 30px;
-    padding-left: 30px;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 340px;
+    width: 200px;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-left: 25px;
     text-align: center;
     font-size: 14px;
     color: #d22856;
+    background-color: #ffffff;
     text-transform: uppercase;
   }
 
@@ -90,8 +123,8 @@
 
   .contacts-form__label {
     position: relative;
-    top: 105px;
-    left: 20px;
+    top: 85px;
+    left: 5px;
   }
 
   .contacts-form__input {

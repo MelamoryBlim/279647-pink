@@ -1,3 +1,8 @@
+.social-links {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .social-link {
   display: inline-block;
   text-align: center;
@@ -12,6 +17,9 @@
   }
   &:active {
     border: 3px solid #e9ebec;
+    .social-link__svg {
+      fill: rgba(210, 40, 86, 0.3);
+    }
   }
   &--twitter {
     padding: 13px 0;
@@ -29,15 +37,10 @@
   margin-top: auto;
 }
 
-@media @mobile-widths-only {
-  .social-links {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-}
-
 @media @tablet-widths {
   .social-links {
+    margin-top: 0;
+    margin-bottom: 0;
     margin-right: 76px;
     float: left;
   }
