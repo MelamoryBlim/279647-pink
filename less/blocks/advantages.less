@@ -4,6 +4,9 @@
   background-repeat: no-repeat;
   background-position: center 110%;
   padding-bottom: 300px;
+  @media @retina {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+  }
 }
 
 .advantages__bg-triangle {
@@ -51,11 +54,13 @@
   .advantages__bg-container {
     width: 320px;
     height: 480px;
-    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: 0px 0px;
     background-attachment: scroll;
-    background-size: 268px 547px;
+    @media @retina {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+    }
   }
 
   .advantages__inner {

@@ -3,11 +3,14 @@
   padding-top: 360px;
   padding-bottom: 0;
   margin-bottom: 0;
-  background-image: url("../../img/iphone-hand-mobile@1x.png");
+  background-image: url("../img/iphone-hand-mobile@1x.png");
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: 258px 286px;
   background-position: center 74px;
+  @media @retina {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+  }
 }
 
 .download-app__inner {

@@ -8,9 +8,31 @@
     padding-top: 100px;
     padding-bottom: 70px;
   }
+  .effect__svg {
+    &::after {
+      content: "24";
+      position: absolute;
+      font-family: "Open Sans Bold";
+      font-weight: 500;
+      width: 175px;
+      height: 175px;
+      font-size: 96px;
+      color: #d22856;
+      border: 14px solid #d22856;
+      border-radius: 50%;
+    }
+  }
+  .effect__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
   .effect__about {
     width: 310px;
-    margin-left: 310px;
+    margin-left: 50px;
     padding-left: 10px;
     padding-right: 20px;
   }
@@ -37,9 +59,14 @@
     padding-bottom: 130px;
   }
 
+  .effect__wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
   .effect__about {
-    width: 500px;
-    margin-left: 370px;
+    width: 570px;
   }
 
   .effect__title {
