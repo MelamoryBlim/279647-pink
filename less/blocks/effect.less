@@ -5,22 +5,9 @@
 @media @tablet-widths {
   .effect {
     display: block;
+    position: relative;
     padding-top: 100px;
     padding-bottom: 70px;
-  }
-  .effect__svg {
-    &::after {
-      content: "24";
-      position: absolute;
-      font-family: "Open Sans Bold";
-      font-weight: 500;
-      width: 175px;
-      height: 175px;
-      font-size: 96px;
-      color: #d22856;
-      border: 14px solid #d22856;
-      border-radius: 50%;
-    }
   }
   .effect__wrapper {
     display: flex;
@@ -29,6 +16,21 @@
     width: 620px;
     margin: 0 auto;
     padding: 0 20px;
+  }
+  .effect__clock {
+    position: relative;
+  }
+  .effect__clock-text {
+    padding: 40px 45px 45px 50px;
+    position: absolute;
+    top: 85px;
+    left: 30px;
+    font-family: "Open Sans Bold";
+    font-weight: 500;
+    font-size: 96px;
+    color: #d22856;
+    border: 14px solid #d22856;
+    border-radius: 50%;
   }
   .effect__about {
     width: 310px;
