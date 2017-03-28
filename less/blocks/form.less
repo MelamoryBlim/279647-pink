@@ -1,9 +1,12 @@
 .form {
+  padding-bottom: 20px;
+}
+
+.form__wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 20px;
 }
 
 .form__about {
@@ -61,6 +64,12 @@
     padding-bottom: 50px;
   }
 
+  .form__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
   .form__about {
     order: -3;
   }
@@ -97,7 +106,10 @@
 }
 
 @media @desktop-widths {
-  .form {
+  .form__wrapper {
     flex-direction: row;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 }
