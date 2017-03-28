@@ -100,9 +100,6 @@
         </div>
       </section>
       <section class="advantages">
-        <svg class="advantages__bg-triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1200px" height="94.074px" viewBox="0 0 1200 94.074" enable-background="new 0 0 1200 94.074" preserveAspectRatio="none">
-          <polygon fill="#ffffff" points="1200,0 0,0 0,94.074 "/>
-        </svg>
         <div class="advantages__wrapper clearfix">
           <div class="advantages__bg-container"></div>
           <div class="advantages__inner">
@@ -137,6 +134,14 @@
         </div>
       </section>
       <section class="reviews">
+        <svg class="reviews__bg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="78.672px" height="63.789px" viewBox="0 0 78.672 63.789" enable-background="new 0 0 78.672 63.789" xml:space="preserve">
+          <g>
+            <path fill="#efefef" d="M34.967,7.063L30.713,0C28.272,1.495,0,12.207,0,39.617c0,7.231,0.336,24.172,18.9,24.172 c11.187,0,13.94-10.279,13.94-13.584c0-21.977-21.382-14.177-21.382-14.177C11.458,17.957,31.263,9.184,34.967,7.063z"/>
+          </g>
+          <g>
+            <path fill="#efefef" d="M78.672,7.063L74.418,0c-2.44,1.495-30.713,12.207-30.713,39.617c0,7.231,0.337,24.172,18.9,24.172 c11.187,0,13.939-10.279,13.939-13.584c0-21.977-21.381-14.177-21.381-14.177C55.165,17.957,74.969,9.184,78.672,7.063z"/>
+          </g>
+        </svg>
         <h2 class="visually-hidden">Отзывы</h2>
         <div class="reviews__wrapper slider">
           <input class="reviews__slider-input-1" type="radio" name="reviews" id="reviews-input-1" checked="">
@@ -149,7 +154,7 @@
           </div>
           <div class="reviews__inner">
             <button class="reviews__prev-btn"></button>
-            <div class="reviews__items">
+            <div class="reviews__items clearfix">
               <blockquote class="reviews__item slider__item">
                 <cite class="reviews__author-name">Николай Петров <span class="reviews__about-author">25 лет, водитель трамвая</span></cite>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
@@ -168,9 +173,6 @@
         </div>
       </section>
       <section class="price">
-        <svg class="price__bg-triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1200px" height="94.074px" viewBox="0 0 1200 94.074" enable-background="new 0 0 1200 94.074" xml:space="preserve" preserveAspectRatio="none">
-          <polygon fill="#ffffff" points="1200,0 0,0 0,94.074 "/>
-        </svg>
         <h2 class="visually-hidden">Тарифы</h2>
         <div class="price__wrapper slider">
           <input type="radio" class="price__slider-input-1" name="price" id="price-input-1">
@@ -295,9 +297,10 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <svg class="map__bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="595.28px" height="61.905px" viewBox="0 0 595.28 61.905" enable-background="new 0 0 595.28 61.905" preserveAspectRatio="none">
+        <svg class="map__bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="595.28px" height="80px" viewBox="0 0 595.28 61.905" enable-background="new 0 0 595.28 61.905" preserveAspectRatio="none">
           <polygon fill="#ffffff" points="297.64,61.905 0,0 595.28,0 "/>
         </svg>
+        <div class="map__content" id="map-canvas"></div>
       </section>
     </main>
     <footer class="page-footer page-footer--index">
@@ -341,5 +344,7 @@
       </div>
     </footer>
     <script src="js/mobile-menu.js"></script>
+    <script src="js/google-maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrSJevpezKEiPmFpIUiV2ZasPnmwwqUP0&callback=initMap" async defer></script>
   </body>
 </html>
