@@ -1,19 +1,22 @@
 .form {
+  padding-bottom: 20px;
+}
+
+.form__wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 20px;
 }
 
 .form__about {
-  padding-top: 50px;
+  padding-top: 35px;
   padding-bottom: 0px;
 }
 
 .form__about-text {
   margin-bottom: 40px;
-  line-height: 1.2;
+  line-height: 2.0;
   text-align: center;
   font-size: 14px;
   color: #283645;
@@ -25,6 +28,7 @@
 .form__btn {
   display: block;
   margin: 0 auto;
+  margin-bottom: 50px;
   padding: 20px 45px;
   background-color: #2aab6d;
   border: none;
@@ -45,20 +49,28 @@
 }
 
 .form__required {
-  margin-top: 30px;
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
   color: #283645;
-}
-
-.form__required--pink {
-  color: #d22856;
+  &--pink {
+    color: #d22856;
+  }
+  &--hidden {
+    display: none;
+  }
 }
 
 @media @tablet-widths {
   .form {
+    padding-top: 10px;
     padding-bottom: 50px;
+  }
+
+  .form__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   .form__about {
@@ -68,7 +80,7 @@
   .form__about-text {
     padding-top: 30px;
     padding-bottom: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     line-height: 1.6;
     text-align: center;
     font-size: 18px;
@@ -86,6 +98,7 @@
 
   .form__btn {
     float: left;
+    margin-bottom: 0;
   }
 
   .form__required {
@@ -98,6 +111,25 @@
 
 @media @desktop-widths {
   .form {
+    padding-bottom: 0;
+  }
+
+  .form__wrapper {
     flex-direction: row;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .form__about-text {
+    margin-bottom: 70px;
+  }
+
+  .form__btn {
+    padding: 22px 60px;
+  }
+
+  .form__required--hidden {
+    display: inline;
   }
 }

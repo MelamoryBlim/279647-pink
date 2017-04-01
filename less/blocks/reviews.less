@@ -1,7 +1,11 @@
 .reviews {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 55px;
   background-color: #ffffff;
+}
+
+.reviews__bg {
+  display: none;
 }
 
 .reviews__wrapper input[type=radio] {
@@ -62,6 +66,7 @@
 }
 
 .reviews__author-name {
+  display: block;
   order: 1;
   font-size: 18px;
   color: #000;
@@ -112,29 +117,26 @@
 
 @media @tablet-widths {
   .reviews {
-    padding-top: 40px;
-    padding-bottom: 80px;
+    padding-top: 0px;
+    padding-bottom: 5px;
   }
 
   .reviews__wrapper {
     width: 620px;
     margin: 0 auto;
-    padding: 0 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 20px;
   }
 
   .reviews__item {
-    padding-bottom: 70px;
-    display: inline-block;
+    padding-bottom: 40px;
     margin: 0;
     width: 620px;
     text-align: center;
-    float: left;
   }
 
   .reviews__author-name {
     order: 2;
+    margin-top: 30px;
     font-size: 20px;
     color: #000;
     font-weight: bold;
@@ -156,7 +158,7 @@
   .reviews__slider-toggles {
     text-align: center;
     position: relative;
-    top: 300px;
+    top: 250px;
   }
 
   .reviews__slider-toggle {
@@ -186,8 +188,13 @@
 
 @media @desktop-widths {
   .reviews {
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+
+  .reviews__bg {
+    display: block;
+    margin: 0 auto;
   }
 
   .reviews__wrapper {
@@ -205,7 +212,7 @@
     background: none;
     border: none;
     position: absolute;
-    top: 145px;
+    top: 85px;
     width: 28px;
     height: 28px;
     border-top: 2px solid #bec2c7;
@@ -215,7 +222,7 @@
   }
 
   .reviews__prev-btn {
-    left: -115px;
+    left: -105px;
     transform: rotateZ(-45deg);
     &:hover {
       border-color: #7e868f;
@@ -226,7 +233,7 @@
   }
 
   .reviews__next-btn {
-    right: -115px;
+    right: -105px;
     transform: rotateZ(135deg);
     &:hover {
       border-color: #7e868f;
@@ -236,16 +243,19 @@
     }
   }
 
+  .reviews__items {
+    margin-top: 10px;
+  }
+
   .reviews__item {
-    padding-bottom: 70px;
-    display: inline-block;
+    padding-bottom: 20px;
     margin: 0;
     width: 680px;
     text-align: center;
-    float: left;
   }
 
   .reviews__author-name {
+    margin-top: 25px;
     font-size: 24px;
     color: #000;
     font-weight: bold;

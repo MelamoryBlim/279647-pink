@@ -2,14 +2,16 @@
   position: relative;
 }
 
-.map__google-map {
+.map__content {
   width: 100%;
   height: 200px;
 }
 
 .map__bg {
   width: 100%;
+  height: 75px;
   position: absolute;
+  z-index: 1;
   top: -1px;
 }
 
@@ -18,13 +20,13 @@
 }
 
 @media @tablet-widths {
-  .map__google-map {
-    height: 360px;
+  .map__content {
+    height: 380px;
   }
 }
 
 @media @desktop-widths {
-  .map__google-map {
-    height: 500px;
+  .map__content {
+    height: 520px;
   }
 }

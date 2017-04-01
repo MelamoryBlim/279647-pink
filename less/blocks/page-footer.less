@@ -17,10 +17,17 @@
   }
 }
 
+.page-footer__wrapper {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .page-footer__copyright-logo {
   display: inline-block;
   vertical-align: middle;
-  width: 27px;
+  height: 40px;
 }
 
 .page-footer__copyright-link {
@@ -42,23 +49,23 @@
     }
   }
 
-  .page-footer__logo-glasses-img {
-    margin-right: 71px;
-    float: left;
-}
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
   .page-footer__copyright {
-    display: inline-block;
-    vertical-align: middle;
     margin-top: 10px;
     font-size: 14px;
     color: #283645;
   }
 
   .page-footer__copyright-logo {
-    display: inline-block;
-    vertical-align: middle;
-    height: 35px;
+    height: 40px;
   }
 }
 
@@ -68,23 +75,22 @@
     padding-bottom: 70px;
   }
 
-  .page-footer__logo-glasses-img {
-    margin-right: 222px;
-    float: left;
-}
+  .page-footer__wrapper {
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
 
   .page-footer__copyright {
-    display: inline-block;
-    vertical-align: middle;
     margin-top: 10px;
     font-size: 18px;
     color: #283645;
   }
 
   .page-footer__copyright-logo {
-    display: inline-block;
-    vertical-align: middle;
-    height: 40px;
     margin-left: 5px;
+    height: 40px;
+    width: 50px;
   }
 }

@@ -1,11 +1,11 @@
 .price {
   background-color: #f2f2f2;
+  padding-top: 10px;
   padding-bottom: 70px;
-}
-
-.price__bg-triangle {
-  width: 100%;
-  height: 30px;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
 }
 
 .price__wrapper {
@@ -72,6 +72,7 @@
 }
 
 .price__item-top {
+  position: relative;
   width: 280px;
   margin-bottom: 0;
   padding-top: 20px;
@@ -102,25 +103,26 @@
 }
 
 .price__item-hit {
-  position: relative;
-  top: -60px;
-  left: 170px;
+  position: absolute;
+  z-index: 2;
+  top: -10px;
+  left: 281px;
   transform: rotate(-45deg);
-  background-repeat: no-repeat;
-  &::after {
-    content: "Хит";
-    font-size: 14px;
-    color: #ffffff;
-    text-transform: uppercase;
-  }
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 .price__item-hit-svg {
+  width: 60px;
   transform: rotate(45deg);
-  position: absolute;
   z-index: -1;
-  top: -15px;
-  left: 102px;
+}
+
+.price__item-hit-text {
+  position: absolute;
+  top: 18px;
+  left: 16px;
 }
 
 .price__table {
@@ -188,7 +190,7 @@
     text-transform: none;
     &--hidden {
       display: block;
-      width: 153px;
+      width: 120px;
       padding: 12px 15px;
       border-left: 2px solid #e7e7e7;
     }
@@ -206,23 +208,17 @@
   }
 
   .price__item-hit {
-    position: relative;
-    top: -60px;
-    left: 100px;
-    transform: rotate(-45deg);
-    &::after {
-      content: "Хит";
-      font-size: 14px;
-      color: #ffffff;
-      text-transform: uppercase;
-    }
+    top: -10px;
+    left: 157px;
   }
 
   .price__item-hit-svg {
-    width: 65px;
-    height: 67px;
-    top: -10px;
-    left: 45px;
+    width: 55px;
+  }
+
+  .price__item-hit-text {
+    top: 20px;
+    left: 15px;
   }
 
   .price__item-top {
@@ -252,34 +248,29 @@
 }
 
 @media @desktop-widths {
+  .price {
+    padding-top: 150px;
+    padding-bottom: 95px;
+  }
+
   .price__wrapper {
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
   }
 
-  .price__item {
-    width: 235px;
-  }
-
   .price__item-hit {
-    position: relative;
-    top: -55px;
-    left: 135px;
-    transform: rotate(-45deg);
-    &::after {
-      content: "Хит";
-      font-size: 14px;
-      color: #ffffff;
-      text-transform: uppercase;
-    }
+    top: -2px;
+    left: 218px;
   }
 
   .price__item-hit-svg {
-    width: 80px;
-    height: 73px;
-    top: -13px;
-    left: 70px;
+    width: 70px;
+  }
+
+  .price__item-hit-text {
+    top: 15px;
+    left: 22px;
   }
 
   .price__item-top {
@@ -290,6 +281,7 @@
   }
 
   .price__item {
+    width: 235px;
     min-height: 2px;
     padding: 0;
     background-color: #ffffff;
@@ -298,8 +290,8 @@
     border-top: 2px solid #e7e7e7;
     border-right: 2px solid #e7e7e7;
     &--hidden {
-      width: 235px;
-      padding: 17px 25px;
+      width: 190px;
+      padding: 20px 25px;
       border-top: none;
     }
   }

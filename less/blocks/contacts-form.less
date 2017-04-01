@@ -1,5 +1,5 @@
 .contacts-form {
-  padding-top: 40px;
+  padding-top: 25px;
   padding-bottom: 40px;
 }
 
@@ -14,6 +14,7 @@
 }
 
 .contacts-form__label {
+  margin-left: 20px;
   font-size: 14px;
   color: #d22856;
   text-transform: uppercase;
@@ -39,12 +40,21 @@
   }
 }
 
+.contacts-form__svg {
+  display: none;
+}
+
 .contacts-form__title {
   font-weight: normal;
   display: none;
 }
 
 @media @tablet-widths {
+  .contacts-form {
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+
   .contacts-form__wrapper {
     width: 580px;
     margin: 0 auto;
@@ -68,15 +78,33 @@
     text-transform: uppercase;
   }
 
-  .contacts-form__label {
+  .contacts-form__item {
+    margin-top: 30px;
     position: relative;
-    top: 85px;
-    left: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-form__svg {
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 20px;
+    &--tel {
+      top: 23px;
+    }
+  }
+
+  .contacts-form__label {
+    order: 2;
+    margin-top: 0px;
   }
 
   .contacts-form__input {
+    order: 1;
+    padding: 20px 20px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 391px;
     border-right-width: 60px;
     &:hover {
@@ -91,13 +119,16 @@
 }
 
 @media @desktop-widths {
+  .contacts-form {
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+
   .contacts-form__wrapper {
     position: relative;
     width: 820px;
     margin: 0 auto;
-    padding: 0 60px;
-    padding-top: 20px;
-    padding-bottom: 50px;
+    padding: 45px 60px 20px 60px;
   }
 
   .contacts-form__title {
@@ -117,17 +148,29 @@
   }
 
   .contacts-form__item {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .contacts-form__svg {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    &--tel {
+      top: 20px;
+      right: 80px;
+    }
   }
 
   .contacts-form__label {
-    position: relative;
-    top: 85px;
-    left: 5px;
+    order: 2;
+    margin-left: 15px;
   }
 
   .contacts-form__input {
+    padding: 20px 20px;
+    margin-bottom: 15px;
     width: 273px;
     border-right-width: 60px;
     &--tel {
