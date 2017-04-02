@@ -5,6 +5,9 @@
   background-position: top center, center 109%;
   background-size: 100% auto, 157px auto;
   padding-bottom: 284px;
+  @media @tablet-and-retina {
+    background-image: none;
+  }
   @media @retina {
     background-image: url("../img/bg-triangle-white.svg"), url("../img/iphone-screen-mobile@2x.png");
     background-size: 100% auto, 157px auto;
@@ -53,6 +56,10 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
+    @media @retina {
+      background-image: url("../img/bg-triangle-white.svg");
+      background-size: 100% auto;
+    }
   }
 
   .advantages__bg-triangle {
