@@ -1,5 +1,5 @@
 .form {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .form__wrapper {
@@ -10,12 +10,14 @@
 }
 
 .form__about {
-  padding-top: 35px;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 33px;
   padding-bottom: 0px;
 }
 
 .form__about-text {
-  margin-bottom: 40px;
+  margin-bottom: 34px;
   line-height: 2.0;
   text-align: center;
   font-size: 14px;
@@ -27,9 +29,10 @@
 
 .form__btn {
   display: block;
+  width: 280px;
   margin: 0 auto;
-  margin-bottom: 50px;
-  padding: 20px 45px;
+  margin-bottom: 40px;
+  padding: 22px 45px;
   background-color: #2aab6d;
   border: none;
   border-radius: 3px;
@@ -74,13 +77,16 @@
   }
 
   .form__about {
+    width: auto;
     order: -3;
   }
 
   .form__about-text {
-    padding-top: 30px;
+    width: 550px;
+    padding-top: 50px;
     padding-bottom: 20px;
-    margin-bottom: 50px;
+    margin: 0 auto;
+    margin-bottom: 45px;
     line-height: 1.6;
     text-align: center;
     font-size: 18px;
@@ -97,12 +103,14 @@
   }
 
   .form__btn {
+    width: 300px;
     float: left;
     margin-bottom: 0;
   }
 
   .form__required {
     float: right;
+    margin-top: 25px;
     &--pink {
       float: none;
     }
@@ -111,18 +119,33 @@
 
 @media @desktop-widths {
   .form {
+    padding-top: 8px;
     padding-bottom: 0;
   }
 
   .form__wrapper {
     flex-direction: row;
+    justify-content: space-around;
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
   }
 
+  .form__about {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 17px;
+  }
+
   .form__about-text {
-    margin-bottom: 70px;
+    width: 760px;
+    &--hidden {
+      display: inline;
+    }
+  }
+
+  .form__btns {
+    width: 940px;
   }
 
   .form__btn {
@@ -131,5 +154,7 @@
 
   .form__required--hidden {
     display: inline;
+    margin-top: 0;
+    float: none;
   }
 }

@@ -1,7 +1,7 @@
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var headerTop = document.querySelector('.page-header__top');
-var pageHeader = document.querySelector('.page-header');
+var pageHeader = document.querySelector('.page-header--index');
 
 navMain.classList.remove('main-nav--nojs');
 
