@@ -1,7 +1,7 @@
 .price {
   background-color: #f2f2f2;
-  padding-top: 10px;
-  padding-bottom: 70px;
+  padding-top: 12px;
+  padding-bottom: 79px;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
   background-position: top center;
@@ -11,7 +11,6 @@
 .price__wrapper {
   width: 320px;
   margin: 0 auto;
-  padding: 0 20px;
   padding-top: 60px;
   padding-bottom: 20px;
 }
@@ -23,17 +22,17 @@
 .price__slider-toggles {
   text-align: center;
   position: relative;
-  top: 340px;
+  top: 335px;
 }
 
 .price__slider-toggle {
   display: inline-block;
   vertical-align: middle;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #bec2c7;
-  margin: 0 3px;
+  margin: 0 6px;
   cursor: pointer;
   transition: 0.1 linear background-color;
   &:hover {
@@ -75,8 +74,8 @@
   position: relative;
   width: 280px;
   margin-bottom: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 21px;
+  padding-bottom: 22px;
   background-color: #283645;
   text-align: center;
   border-right: 2px solid #e7e7e7;
@@ -89,15 +88,15 @@
   display: block;
   color: #ffffff;
   margin: 0;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .price__item-cost {
-  font-family: "Open Sans Light";
-  font-weight: 200;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: 300;
   color: #ffffff;
   font-size: 24px;
 }
@@ -131,7 +130,7 @@
 }
 
 .price__item {
-  padding: 15px 25px;
+  padding: 17px 25px;
   margin-bottom: 2px;
   background-color: #ffffff;
   border-bottom: 2px solid #e7e7e7;
@@ -162,6 +161,11 @@
 }
 
 @media @tablet-widths {
+  .price {
+    padding-top: 11px;
+    padding-bottom: 63px;
+  }
+
   .price__wrapper {
     width: 620px;
     margin: 0 auto;
@@ -182,7 +186,7 @@
 
   .price__item {
     min-width: 103px;
-    padding: 4px 25px;
+    padding: 10px 25px;
     margin-bottom: 0;
     background-color: #ffffff;
     color: #283645;
@@ -191,7 +195,7 @@
     &--hidden {
       display: block;
       width: 120px;
-      padding: 12px 15px;
+      padding: 15px 15px;
       border-left: 2px solid #e7e7e7;
     }
   }
@@ -222,6 +226,8 @@
   }
 
   .price__item-top {
+    padding-top: 18px;
+    padding-bottom: 15px;
     border-right: 2px solid #e7e7e7;
     &:last-child {
       border: none;
@@ -232,6 +238,14 @@
       visibility: hidden;
       border-bottom: 2px solid #e7e7e7;
     }
+  }
+
+  .price__item-title {
+    font-size: 16px;
+  }
+
+  .price__item-cost {
+    font-size: 18px;
   }
 
   .price__slider-input-1:checked ~ .price__inner .price__table {
@@ -249,7 +263,7 @@
 
 @media @desktop-widths {
   .price {
-    padding-top: 150px;
+    padding-top: 154px;
     padding-bottom: 95px;
   }
 
@@ -274,10 +288,20 @@
   }
 
   .price__item-top {
+    padding-top: 21px;
+    padding-bottom: 22px;
     border-right: 2px solid #e7e7e7;
     &:last-child {
       border: none;
     }
+  }
+
+  .price__item-title {
+    font-size: 18px;
+  }
+
+  .price__item-cost {
+    font-size: 24px;
   }
 
   .price__item {
@@ -290,8 +314,8 @@
     border-top: 2px solid #e7e7e7;
     border-right: 2px solid #e7e7e7;
     &--hidden {
-      width: 190px;
-      padding: 20px 25px;
+      width: 180px;
+      padding: 18px 25px 20px 23px;
       border-top: none;
     }
   }

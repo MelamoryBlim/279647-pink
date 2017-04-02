@@ -1,10 +1,13 @@
-.page-footer__logo-glasses-img {
+.page-footer__logo-img {
   width: 150px;
       &:hover .page-header__logo-symbol {
         fill: #ba2b54;
       }
       &:active .page-header__logo-symbol {
         fill: rgba(255, 255, 255, 0.3)
+      }
+      &--desktop {
+        display: none;
       }
 }
 
@@ -42,7 +45,7 @@
 @media @tablet-widths {
   .page-footer {
     display: block;
-    padding-top: 40px;
+    padding-top: 35px;
     padding-bottom: 35px;
     &--index {
       display: block;
@@ -65,7 +68,11 @@
   }
 
   .page-footer__copyright-logo {
-    height: 40px;
+    margin-left: 10px;
+  }
+
+  .page-footer__logo-svg {
+    width: 26px;
   }
 }
 
@@ -80,6 +87,15 @@
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
+  }
+
+  .page-footer__logo-img {
+    &--tablet {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+    }
   }
 
   .page-footer__copyright {

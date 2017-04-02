@@ -38,9 +38,9 @@
 
   .page-header__title {
     text-align: center;
-    font-family: "Open Sans Light";
+    font-family: "Open Sans", "Tahoma", sans-serif;
     font-size: 24px;
-    font-weight: 200;
+    font-weight: 300;
     color: #ffffff;
   }
 
@@ -77,7 +77,7 @@
 @media @tablet-widths {
   .page-header {
     &--index {
-      padding-bottom: 70px;
+      padding-bottom: 73px;
       background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
       background-repeat: no-repeat, no-repeat;
       background-attachment: scroll, scroll;
@@ -128,9 +128,9 @@
 
   .page-header__title {
     text-align: center;
-    font-family: "Open Sans Light";
+    font-family: "Open Sans", "Tahoma", sans-serif;
     font-size: 50px;
-    font-weight: 200;
+    font-weight: 300;
     color: #ffffff;
   }
 
@@ -139,10 +139,14 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 
+  .page-header__logo-link {
+
+  }
+
   .page-header__logo-img {
     width: 150px;
     height: 40px;
-    margin: 25px 0px 20px 20px;
+    margin: 27px 0px 0px 20px;
     &--mobile {
       display: none;
     }
@@ -155,11 +159,11 @@
 @media @desktop-widths {
   .page-header {
     &--index {
-      padding-bottom: 85px;
+      padding-bottom: 87px;
       background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
       background-repeat: no-repeat, no-repeat;
       background-attachment: scroll, scroll;
-      background-position: 250px bottom, center center;
+      background-position: 147px bottom, center center;
       background-size: 1050px 645px, cover;
       @media @desktop-and-retina {
         background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
@@ -213,9 +217,9 @@
   .page-header__title {
     order: 2;
     text-align: center;
-    font-family: "Open Sans Light";
+    font-family: "Open Sans", "Tahoma", sans-serif;
     font-size: 50px;
-    font-weight: 200;
+    font-weight: 300;
     color: #ffffff;
   }
 
@@ -231,7 +235,8 @@
   .page-header__logo-img {
     width: 150px;
     height: 40px;
-    margin-top: 25px;
+    margin-top: 10px;
+    margin-left: 0;
     &--mobile {
       display: none;
     }
