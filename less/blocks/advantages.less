@@ -5,20 +5,10 @@
   background-position: top center, center 109%;
   background-size: 100% auto, 157px auto;
   padding-bottom: 284px;
-  @media @tablet-and-retina {
-    background-image: none;
-  }
   @media @retina {
     background-image: url("../img/bg-triangle-white.svg"), url("../img/iphone-screen-mobile@2x.png");
     background-size: 100% auto, 157px auto;
   }
-}
-
-.advantages__bg-triangle {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 45px;
 }
 
 .advantages__wrapper {
@@ -52,13 +42,12 @@
     padding-top: 0;
     padding-bottom: 0;
     background-image: none;
-    background-image: url("../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
-    @media @retina {
+    @media @tablet-and-retina {
+      background-image: none;
       background-image: url("../img/bg-triangle-white.svg");
-      background-size: 100% auto;
     }
   }
 
