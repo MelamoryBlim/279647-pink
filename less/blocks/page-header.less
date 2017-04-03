@@ -2,7 +2,7 @@
     background-image: url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: 705px auto;
+    background-size: 710px auto;
     &--bg-top {
       background-position: top center;
     }
@@ -32,7 +32,7 @@
     }
     @media @retina {
       background-image: url("../img/bg-back-mobile@2x.jpg");
-      background-size: 700px auto;
+      background-size: 710px auto;
     }
     @media @tablet-and-retina {
       background-image: none;
@@ -62,27 +62,22 @@
 
   .page-header__logo-link {
     margin-left: 20px;
-  }
-
-  .page-header__logo-img {
-    margin: 20px 0px 20px 20px;
-    width: 75px;
-    height: 25px;
-    fill: #000000;
-    &--tablet, &--desktop {
-      display: none;
-      cursor: pointer;
-      &:hover .page-header__logo-symbol {
-        fill: #ba2b54;
-      }
-      &:active .page-header__logo-symbol {
-        fill: rgba(255, 255, 255, 0.3)
-      }
+    &:hover .page-header__logo-symbol,
+    &:hover .just-glasses {
+      fill: #ba2b54;
+    }
+    &:active .page-header__logo-symbol,
+    &:active .just-glasses {
+      fill: rgba(255, 255, 255, 0.3)
     }
   }
 
-  .page-header__logo-img--tablet .page-header__logo-symbol {
-    fill: #ffffff;
+  .page-header__logo-img {
+    margin: 5px 0px 20px -72px;
+    width: 150px;
+    .just-glasses, .stars-glasses, .stars, .one-star {
+      display: none;
+    }
   }
 
 @media @tablet-widths {
@@ -150,18 +145,16 @@
   }
 
   .page-header__logo-link {
-    margin-right: 170px;
+    width: 320px;
   }
 
   .page-header__logo-img {
     width: 150px;
     height: 40px;
     margin: 27px 0px 0px 0px;
-    &--mobile {
-      display: none;
-    }
-    &--tablet {
-      display: inline-block;
+    .just-glasses {
+      display: block;
+      fill: #ffffff;
     }
   }
 }
@@ -240,6 +233,12 @@
   .page-header__logo-link {
     margin-left: 0;
     margin-bottom: 20px;
+    &:hover .one-star {
+      fill: #ba2b54;
+    }
+    &:active .one-star {
+      fill: rgba(255, 255, 255, 0.3)
+    }
   }
 
   .page-header__logo-img {
@@ -247,14 +246,11 @@
     height: 40px;
     margin-top: 10px;
     margin-left: 0;
-    &--mobile {
+    .just-glasses {
       display: none;
     }
-    &--tablet {
-      display: none;
-    }
-    &--desktop {
-      display: inline-block;
+    .stars-glasses, .stars, .one-star {
+      display: block;
     }
   }
 }

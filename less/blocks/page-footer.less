@@ -1,14 +1,19 @@
+.page-footer__logo-link {
+  &:hover .page-footer__logo-symbol,
+  &:hover .just-glasses {
+    fill: #ba2b54;
+  }
+  &:active .page-footer__logo-symbol,
+  &:active .just-glasses {
+    fill: rgba(255, 255, 255, 0.3)
+  }
+}
+
 .page-footer__logo-img {
   width: 150px;
-      &:hover .page-header__logo-symbol {
-        fill: #ba2b54;
-      }
-      &:active .page-header__logo-symbol {
-        fill: rgba(255, 255, 255, 0.3)
-      }
-      &--desktop {
-        display: none;
-      }
+  .stars-glasses, .stars, .one-star {
+    display: none;
+  }
 }
 
 .page-footer {
@@ -94,10 +99,12 @@
   }
 
   .page-footer__logo-img {
-    &--tablet {
+    width: 150px;
+    height: 40px;
+    .just-glasses {
       display: none;
     }
-    &--desktop {
+    .stars-glasses, .stars, .one-star {
       display: block;
     }
   }
