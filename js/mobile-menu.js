@@ -10,18 +10,15 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
     headerTop.style.backgroundColor = '#283645';
-    if(window.matchMedia('(max-width: 660px)').matches) {
-      pageHeader.style.backgroundPosition = 'center center';
-    }
+    pageHeader.classList.remove('page-header--bg-top');
+    pageHeader.classList.add('page-header--bg-center');
   } else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
     headerTop.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
-    if(window.matchMedia('(max-width: 659px)').matches) {
-      pageHeader.style.backgroundPosition = 'top center';
-    }
-    if(window.matchMedia('(min-width: 660px)').matches) {
-      pageHeader.style.backgroundPosition = 'bottom center';
-    }
+    pageHeader.classList.add('page-header--bg-top');
+    pageHeader.classList.remove('page-header--bg-center');
   }
 });
+
+
