@@ -1,8 +1,12 @@
 .contacts {
   background-color: #ffffff;
-  padding-top: 35px;
+  padding-top: 25px;
   padding-bottom: 30px;
   text-align: center;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
 }
 
 .contacts__items {
@@ -12,9 +16,13 @@
   justify-content: space-between;
 }
 
+.contacts__item {
+  margin-bottom: 0px;
+}
+
 .contacts__item-title {
   display: block;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 5px;
   color: #283645;
   font-size: 18px;
@@ -25,8 +33,8 @@
   display: block;
   padding-bottom: 10px;
   text-decoration: none;
-  font-family: "Open Sans Light";
-  font-weight: 200;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: 300;
   color: #d22856;
   font-size: 24px;
   transition: 0.1s linear color, 0.1s linear text-decoration;
@@ -41,8 +49,8 @@
 }
 
 .contacts__title {
-  font-family: "Open Sans Light";
-  font-weight: 200;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: 300;
   line-height: 1.2;
   color: #283645;
 }
@@ -54,10 +62,9 @@
   }
 
   .contacts__title {
-    font-family: "Open Sans Light";
-    font-weight: 200;
     font-size: 40px;
     color: #283645;
+    margin-bottom: 30px;
   }
 
   .contacts__items {
@@ -65,12 +72,15 @@
   }
 
   .contacts__item {
-    width: 50%;
-    margin-bottom: 15px;
+    width: 48%;
+    margin-bottom: 26px;
 
     &:last-child {
       margin-left: 25%;
       margin-right: 25%;
+      .contacts__item-title {
+        margin-bottom: 11px;
+      }
     }
   }
 }
@@ -80,8 +90,7 @@
     padding-top: 25px;
   }
   .contacts__title {
-    font-family: "Open Sans Light";
-    font-weight: 200;
+    margin-bottom: 42px;
     font-size: 50px;
     color: #283645;
   }
@@ -90,6 +99,13 @@
     width: 33%;
     &:last-child {
       margin: 0;
+      .contacts__item-title {
+        margin-bottom: 26px;
+      }
+      .contacts__item-link {
+        width: 250px;
+        margin: 0 auto;
+      }
     }
     &--email {
       order: 2;
@@ -100,6 +116,6 @@
   }
 
   .contacts__item-title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 }

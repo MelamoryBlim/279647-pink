@@ -1,7 +1,7 @@
 .photo-editor {
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 42px;
   background-color: #f2f2f2;
 }
 
@@ -27,21 +27,24 @@
 }
 
 .photo-editor__edit-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 210px;
+  margin: 0 auto;
   margin-top: 35px;
   text-align: center;
   border: none;
 }
 
 .photo-editor__edit-btn {
+  padding: 0;
+  padding-top: 2px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
-  &--contrast {
-    margin-right: 0;
-  }
   &--crop .photo-editor__svg {
     fill: #d22856;
   }
@@ -58,11 +61,14 @@
 }
 
 .photo-editor__sliders {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .photo-editor__slider {
   position: relative;
+  &--crop {
+    margin-top: 33px;
+  }
 }
 
 .photo-editor__slider-scale {
@@ -81,12 +87,8 @@
   border: 2px solid #d22856;
   &--crop {
     top: -6px;
-    left: 220px;
+    left: 190px;
   }
-}
-
-.photo-editor__slider--crop {
-  margin-top: 30px;
 }
 
 .photo-editor__slider--color,
@@ -95,7 +97,7 @@
 }
 
 .photo-editor__post-btns {
-  padding-top: 30px;
+  padding-top: 38px;
   border-top: 1px solid rgba(40, 54, 69, 0.1);
 }
 
@@ -105,7 +107,7 @@
   margin: 0 auto;
   padding: 15px 80px;
   width: 100%;
-  font-family: 'Open Sans';
+  font-family: "Open Sans", "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #d22856;
@@ -130,7 +132,7 @@
   padding: 15px 92px;
   width: 100%;
   margin-top: 10px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans", "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: rgba(40, 54, 69, 0.1);
@@ -152,7 +154,7 @@
 @media @tablet-widths {
   .photo-editor {
     padding-top: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 48px;
     background-color: #f2f2f2;
   }
 
@@ -166,16 +168,23 @@
     margin-right: 15px;
   }
 
+  .photo-editor__filters {
+    justify-content: flex-start;
+  }
+
   .photo-editor__edit-btns {
-    width: 22px;
+    display: block;
+    min-width: 22px;
+    margin-left: 10px;
     margin-top: 0;
-    margin-right: 50px;
+    margin-right: 0px;
   }
 
   .photo-editor__edit-btn {
     display: block;
+    margin-right: 0;
     width: 30px;
-    padding-top: 12px;
+    padding-top: 6px;
     padding-bottom: 40px;
     &::after {
       content: '';
@@ -188,6 +197,9 @@
     }
     &--contrast {
       margin-left: 5px;
+      &::after {
+        top: 23px;
+      }
     }
   }
 
@@ -199,19 +211,20 @@
   }
 
   .photo-editor__sliders {
-    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-bottom: 35px;
     padding-top: 10px;
     width: 202px;
-    float: left;
   }
 
   .photo-editor__slider {
     display: block;
     position: relative;
     margin-top: 0;
-    margin-bottom: 75px;
+    margin-bottom: 68px;
     &--crop {
-      margin-top: 10px;
+      margin-top: 7px;
+      margin-bottom: 70px;
     }
     &--color, &--contrast {
       visibility: visible;
@@ -244,7 +257,6 @@
   .photo-editor__post-btns {
     padding-top: 0;
     margin-left: 20px;
-    float: left;
     border: none;
   }
 
@@ -253,7 +265,7 @@
     display: block;
     margin: 0 auto;
     padding: 15px 80px;
-    font-family: 'Open Sans';
+    font-family: "Open Sans", "Tahoma", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: #d22856;
@@ -277,7 +289,7 @@
     margin: 0 auto;
     padding: 15px 92px;
     margin-top: 20px;
-    font-family: 'Open Sans';
+    font-family: "Open Sans", "Tahoma", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: rgba(40, 54, 69, 0.1);
@@ -299,7 +311,8 @@
 
 @media @desktop-widths {
   .photo-editor {
-    padding-bottom: 30px;
+    padding-top: 58px;
+    padding-bottom: 28px;
     background-color: #ffffff;
   }
 
@@ -309,7 +322,6 @@
 
   .photo-editor__filters {
     width: 410px;
-    float: left;
   }
 
   .photo-editor__wrapper {
@@ -321,19 +333,20 @@
 
   .photo-editor__img {
     width: 300px;
+    margin-left: 11px;
     margin-right: 70px;
   }
 
   .photo-editor__edit-btns {
     width: 42px;
-    float: left;
-    margin-right: 60px;
+    margin-right: 22px;
   }
 
   .photo-editor__edit-btn {
     display: block;
-    padding-top: 5px;
+    padding-top: 0px;
     padding-bottom: 10px;
+    margin-bottom: 14px;
     &::after {
       content: '';
       display: block;
@@ -342,6 +355,12 @@
       width: 380px;
       height: 1px;
       background-color: #dddfe0;
+    }
+    &--color {
+      margin-bottom: 20px;
+    }
+    &--contrast::after {
+      top: 15px;
     }
     .photo-editor__svg {
       fill: #d22856;
@@ -356,18 +375,20 @@
   }
 
   .photo-editor__sliders {
-    margin-bottom: 13px;
+    margin-bottom: 11px;
     padding-top: 20px;
     width: 290px;
-    float: left;
   }
 
   .photo-editor__slider {
     display: block;
     position: relative;
-    margin-bottom: 65px;
+    margin-bottom: 70px;
     &--crop {
-      margin-top: 10px;
+      margin-top: 0px;
+    }
+    &--color {
+      margin-bottom: 68px;
     }
     &--color, &--contrast {
       visibility: visible;
@@ -387,13 +408,13 @@
     border-radius: 50%;
     border: 2px solid #d22856;
     &--crop {
-      left: 75px;
+      left: 70px;
     }
     &--color {
-      left: 250px;
+      left: 248px;
     }
     &--contrast {
-      left: 170px;
+      left: 160px;
     }
   }
 
@@ -401,17 +422,15 @@
     margin-top: 90px;
     margin-left: 0;
     width: 450px;
-    float: left;
   }
 
     .photo-editor__submit-btn {
     width: 180px;
     cursor: pointer;
     display: inline-block;
-    margin: 0 auto;
-    margin-right: 44px;
+    margin-right: 45px;
     padding: 15px 41px;
-    font-family: 'Open Sans';
+    font-family: "Open Sans", "Tahoma", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: #d22856;
@@ -433,10 +452,9 @@
     width: 180px;
     cursor: pointer;
     display: inline-block;
-    margin: 0 auto;
     padding: 15px 53px;
     margin-top: 10px;
-    font-family: 'Open Sans';
+    font-family: "Open Sans", "Tahoma", sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: rgba(40, 54, 69, 0.1);

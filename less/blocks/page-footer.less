@@ -1,11 +1,19 @@
-.page-footer__logo-glasses-img {
+.page-footer__logo-link {
+  &:hover .page-footer__logo-symbol,
+  &:hover .just-glasses {
+    fill: #ba2b54;
+  }
+  &:active .page-footer__logo-symbol,
+  &:active .just-glasses {
+    fill: rgba(255, 255, 255, 0.3)
+  }
+}
+
+.page-footer__logo-img {
   width: 150px;
-      &:hover .page-header__logo-symbol {
-        fill: #ba2b54;
-      }
-      &:active .page-header__logo-symbol {
-        fill: rgba(255, 255, 255, 0.3)
-      }
+  .stars-glasses, .stars, .one-star {
+    display: none;
+  }
 }
 
 .page-footer {
@@ -30,6 +38,10 @@
   height: 40px;
 }
 
+.page-footer__copyright {
+  font-size: 14px;
+}
+
 .page-footer__copyright-link {
   &:hover .page-footer__logo-svg {
     fill: #283645;
@@ -42,7 +54,7 @@
 @media @tablet-widths {
   .page-footer {
     display: block;
-    padding-top: 40px;
+    padding-top: 35px;
     padding-bottom: 35px;
     &--index {
       display: block;
@@ -65,7 +77,11 @@
   }
 
   .page-footer__copyright-logo {
-    height: 40px;
+    margin-left: 10px;
+  }
+
+  .page-footer__logo-svg {
+    width: 26px;
   }
 }
 
@@ -80,6 +96,17 @@
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
+  }
+
+  .page-footer__logo-img {
+    width: 150px;
+    height: 40px;
+    .just-glasses {
+      display: none;
+    }
+    .stars-glasses, .stars, .one-star {
+      display: block;
+    }
   }
 
   .page-footer__copyright {
